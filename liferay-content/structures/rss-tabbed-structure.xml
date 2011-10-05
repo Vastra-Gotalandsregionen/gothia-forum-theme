@@ -1,0 +1,32 @@
+<root>
+	<dynamic-element name='rssFeedURL' type='text' index-type='' repeatable='true'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in feedens URL.]]></entry>
+			<entry name="label"><![CDATA[Feed - URL]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		
+  		<dynamic-element name='rssFeedLabel' type='text' index-type='' repeatable='false'>
+  			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[true]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in feedets namn.]]></entry>
+				<entry name="label"><![CDATA[Feed - namn]]></entry>
+				<entry name="predefinedValue"><![CDATA[Feednamn]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+		<dynamic-element name='maxCount' type='text' index-type='' repeatable='false'>
+	 		<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in maximala antalet feed entries som skall visas. V&auml;rdet skall vara ett heltalsv&auml;rde. Om f&auml;ltet l&auml;mnas tomt s&aring; kommer alla entries visas. Om ett v&auml;rde som inte &auml;r ett heltal skrivs in s&aring; kommer ett defaultv&auml;rde om 10 anv&auml;ndas.]]></entry>
+				<entry name="label"><![CDATA[Maxantal feed entries]]></entry>
+				<entry name="predefinedValue"><![CDATA[10]]></entry>
+			</meta-data>
+		</dynamic-element>	
+
+	</dynamic-element>
+</root>

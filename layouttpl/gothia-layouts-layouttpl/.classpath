@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.liferay.studio.eclipse.server.ee.tomcat.runtimeClasspathProvider/VGR Gothia SP2 Liferay v6.0 EE Server (Tomcat 6) at localhost">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/VGR Gothia SP2 Liferay v6.0 EE Server (Tomcat 6) at localhost JRE">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="docroot/WEB-INF/classes"/>
+</classpath>

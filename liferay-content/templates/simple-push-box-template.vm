@@ -1,0 +1,47 @@
+## Remember to uncheck Cacheable in the edit template form for this template
+
+#set ($isSignedIn = false)
+#set ($remoteUser = $request.get("remote-user"))
+
+#if ($remoteUser != '')
+	#set ($isSignedIn = true)
+#end
+
+#set($showContent = false)
+
+#if($show-when.data == 0)
+	#set($showContent = true)
+#elseif($show-when.data == 1 && $isSignedIn)
+	#set($showContent = true)
+#elseif($show-when.data == 2 && !$isSignedIn)
+	#set($showContent = true)
+#end
+
+#set($link_target = "")
+#if($link-target-blank.data == "true")
+	#set($link_target = "_BLANK")
+#end
+
+
+#if($showContent)
+	<div class="simple-push-box">
+		#if($link.data != "")
+			<a href="${link.data}" target="${link_target}">
+				<img src="${image.data}" alt="${image-alt.data}" />
+			</a>		
+		#else
+			<img src="${image.data}" alt="${image-alt.data}" />
+		#end
+	</div>
+#end
+
+<script type="text/javascript">
+	AUI().use('aui-base', function(A) {
+		var portletNamespace = '${request.portlet-namespace}';
+		var portletBoundary = A.one('#p_p_id' + portletNamespace);
+
+		var portletContainer = portletBoundary.one('.portlet-borderless-container');
+		
+		portletContainer.addClass('portlet-borderless-container-minimized');
+	});
+</script>

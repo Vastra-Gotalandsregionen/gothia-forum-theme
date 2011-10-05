@@ -1,0 +1,91 @@
+#set ($portletNamespace = $request.get('portlet-namespace'))
+#set ($tabsWrapID = $portletNamespace + "tabsWrap")
+#set ($tabsListID = $portletNamespace + "tabsList")
+#set ($tabsContentID = $portletNamespace + "tabsContent")
+
+#if($tabLabel.siblings.size() > 0)
+	#set($tabGroupCssClass = $cssClassTabGroup.data)
+	<div id="${tabsWrapID}" class="tabbed-rss flofftest">
+		<ul id="${tabsListID}" class="aui-tabview-list aui-widget-hd aui-tabview-3">
+			## Loop each tab sibling
+			#foreach($tab in $tabLabel.siblings)
+				#set($curLabel = $tab.data)
+				#set($curItemCssClass = "")
+				
+				## Loop each child field to tab
+				#foreach($tab_child in $tab.children)
+					#if ($tab_child.name== "cssClassTabItem" && $tab_child.data!= "")
+						#set($curItemCssClass = $tab_child.data)
+					#end
+				#end
+				<li class="aui-tab item-${curItemCssClass}"><a class="aui-tab-label" href="javascript:;">${curLabel}</a></li>
+			#end
+		</ul>
+		
+		<div id="${tabsContentID}" class="aui-tabview-content aui-widget-bd">
+			#foreach($tab in $tabLabel.siblings)
+				<div class="aui-tabview-content-item">
+				</div>
+			#end
+		</div>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+		Liferay.on(
+			'allPortletsReady',
+			// This function gets loaded when everything, including the portlets, is on the page.
+			function() {
+				AUI().use(
+					'aui-base',
+					'aui-tabs',
+					function(A) {
+						var CONTENT_ITEM_ID_PREFIX = 'item-';
+						var CSS_RSS_TABS_ACTIVATED = 'rss-tabs-activated';
+					
+						var tabs1 = new A.TabView(
+							{
+								boundingBox: '#${tabsWrapID}',
+								listNode: '#${tabsListID}',
+								contentNode: '#${tabsContentID}'
+							}
+						);
+						
+						tabs1.after('render', function(event) {
+							var tabs1 = this;
+							var tabsList = tabs1.get('items');
+							
+							A.each(tabsList, function(item, index) {
+								var tabs1 = this;
+								var curTab = item;
+								var curContentEl = null;
+								
+								var curSrcNode = curTab.get('srcNode');
+								var curListItem = curSrcNode.ancestor('li');
+								var cssClasses = curListItem.getAttribute('class').split(' ');
+								
+								A.each(cssClasses, function(item, index) {
+									var tabs1 = this;
+									var contentItemClass = '';
+									var match = (item.match('^'+CONTENT_ITEM_ID_PREFIX) == CONTENT_ITEM_ID_PREFIX);
+									
+									if(match) {
+										var contentItemClass = item.replace(CONTENT_ITEM_ID_PREFIX, '');
+										curContentEl = A.one('.' + contentItemClass);
+									}
+								}, tabs1);
+								
+								var curContentNode = curTab.get('contentNode');
+								
+								curContentEl.addClass(CSS_RSS_TABS_ACTIVATED);
+								curContentNode.append(curContentEl);
+							}, tabs1);
+							
+						}, tabs1);
+
+						tabs1.render();
+					}
+				);
+			}
+		);
+	</script>
+#end

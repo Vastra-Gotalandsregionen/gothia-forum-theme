@@ -1,0 +1,32 @@
+<root>
+
+	<dynamic-element name='heading' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in titel.]]></entry>
+			<entry name="label"><![CDATA[Titel]]></entry>
+			<entry name="predefinedValue"><![CDATA[Kalender]]></entry>
+		</meta-data>
+	</dynamic-element>		
+
+	<dynamic-element name='feedURL' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in URL till feeden i Regionkalendern.]]></entry>
+			<entry name="label"><![CDATA[Regionkalendern - URL]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	
+	<dynamic-element name='maxCount' type='text' index-type='' repeatable='false'>
+ 		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in maximala antalet feed entries som skall visas. V&auml;rdet skall vara ett heltalsv&auml;rde. Om f&auml;ltet l&auml;mnas tomt s&aring; kommer alla entries visas. Om ett v&auml;rde som inte &auml;r ett heltal skrivs in s&aring; kommer ett defaultv&auml;rde om 10 anv&auml;ndas.]]></entry>
+			<entry name="label"><![CDATA[Maxantal feed entries]]></entry>
+			<entry name="predefinedValue"><![CDATA[10]]></entry>
+		</meta-data>
+	</dynamic-element>	
+</root>

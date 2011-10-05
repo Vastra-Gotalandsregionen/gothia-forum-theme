@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.0.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_0_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.0.11+</version>
+	</compatibility>
+	<theme id="gothia-forum" name="Gothia Forum" />
+	
+	<theme id="gothia-forum" name="Gothia Forum Theme (with breadcrumbs)">
+		<root-path>/</root-path>
+		<templates-path>${root-path}/templates</templates-path>
+		<images-path>${root-path}/images</images-path>
+		<template-extension>vm</template-extension>
+		<settings>
+			<setting key="bullet-style-options" value="1,2" />
+			<setting key="site-breadcrumbs" value="true" />
+		</settings>
+		<roles>
+			<role-name>User</role-name>
+		</roles>
+	</theme>
+	<theme id="gothia-forum-2" name="Gothia Forum Theme (no breadcrumbs)">
+		<root-path>/</root-path>
+		<templates-path>${root-path}/templates</templates-path>
+		<images-path>${root-path}/images</images-path>
+		<template-extension>vm</template-extension>
+		<settings>
+			<setting key="bullet-style-options" value="1,2" />
+			<setting key="site-breadcrumbs" value="false" />
+		</settings>
+		<roles>
+			<role-name>User</role-name>
+		</roles>
+	</theme>
+	
+	
+</look-and-feel>

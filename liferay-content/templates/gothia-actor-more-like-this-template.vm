@@ -1,0 +1,11 @@
+#set($titleContent = "")
+
+#if($intro.data != "")
+	#set($titleContent = $stringUtil.shorten($intro.data, 200))
+#elseif($description.data)
+	#set($titleContent = $stringUtil.shorten($description.data, 200))
+#end
+
+<span class="mlt-title" title="${titleContent}">
+	$stringUtil.shorten($actor-name.data, 24) &raquo;
+</span>

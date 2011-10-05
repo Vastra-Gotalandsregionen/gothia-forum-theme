@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html dir="#language("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+	$theme.include($top_head_include)
+
+	### TODO: move to separate style sheet	
+	<!--[if !IE 7]>
+		<style type="text/css">
+			#wrap {display:table;height:100%}
+		</style>
+	<![endif]-->
+</head>
+
+<body class="$css_class">
+
+#if($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrap">
+
+	<header id="header" role="header">
+		<div class="header-inner grid-960 clearfix">
+			<div class="aui-column aui-w100">
+				<a href="#main-content" id="skip-to-content">#language("skip-to-content")</a>
+				#if ($update_available_url)
+					<div class="popup-alert-notice">
+						<a class="update-available" href="$update_available_url">#language("updates-are-available-for-liferay")</a>
+					</div>
+				#end
+			</div>
+			<div class="top-bar clearfix">
+				<div class="logo-wrap">
+					<hgroup id="heading">
+						<h1 class="company-title">
+							<a class="logo" href="/home" title="#language("go-to") $company_name">
+								<span>$company_name</span>
+							</a>
+						</h1>
+						<h2 class="community-title">
+							<a href="$community_default_url" title="#language("go-to") $community_name">
+								<span>$community_name</span>
+							</a>
+						</h2>
+						<h3 class="page-title">
+							<span>$the_title</span>
+						</h3>
+					</hgroup>
+				</div>
+				
+				<div class="top-nav-wrap">
+					#parse ("$full_templates_path/top_navigation.vm")
+				</div>
+			</div>
+			
+			<div class="nav-wrap">
+				#if ($has_navigation)
+					#parse ("$full_templates_path/navigation.vm")
+				#end
+			</div>
+	</header>
+	
+	<div id="content">
+		<div class="content-inner grid-960 clearfix">
+		
+			<div class="aui-column aui-w70">
+				#if($use_site_breadcrumbs)
+					<nav class="site-breadcrumbs" id="breadcrumbs">
+						<h1>
+							<span>#language("breadcrumbs")</span>
+						</h1>
+						#breadcrumbs()
+					</nav>
+				#else
+					&nbsp;
+				#end
+			</div>
+			<div class="aui-column aui-w30">
+				#if($add-this-active)
+					#parse ("$full_templates_path/sharing_add_this.vm")
+				#else
+					&nbsp;
+				#end
+			</div>
+
+			#if ($selectable)
+				$theme.include($content_include)
+			#else
+				$portletDisplay.recycle()
+		
+				$portletDisplay.setTitle($the_title)
+		
+				$theme.wrapPortlet("portlet.vm", $content_include)
+			#end
+		</div>
+	</div>
+	
+</div>
+
+<footer>
+	<div id="footer">
+		#parse ("$full_templates_path/footer.vm")
+	</div>
+</footer>	
+
+$theme.include($bottom_include)
+#js ("$javascript_folder/gothia-theme-main.js")
+#js ("$javascript_folder/main-instance.js")
+
+#if($add-this-active)
+	<script type="text/javascript" src="$add-this-widget-url-full"></script>
+#end
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<ul class="clearfix">
+	<li>
+		<a href="$page_contact_url"><span>$page_contact_text</span></a>|
+	</li>
+	#if($has-english-site)
+		<li>
+			<a href="$site_english_url"><span>$site_english_text</span></a>|
+		</li>
+	#end
+	<li>
+		<a href="$vgr_url"><span>$vgr_text</span></a>|
+	</li>
+	
+	#if($is_signed_in)
+		<li>
+			<a href="$sign_out_url"><span>$sign_out_text</span></a>|
+		</li>
+		<li class="profile-link">
+			<a href="$profile_url"><span>$profile_text</span></a>
+			<span class="profile-help">$profile_help_text</span>
+		</li>
+	#else
+		<li>
+			<a href="$sign_in_url"><span>$sign_in_text</span></a>
+		</li>
+	#end
+	
+	
+</ul>

@@ -1,0 +1,38 @@
+<h1>${heading.data}</h1>
+#foreach($coworker in $coworkers.siblings)
+	<div class="coworker-wrap clearfix">
+		#if($coworker.title.data != "")
+			<h2 class="coworker-title">${coworker.title.data}: ${coworker.data}</h2>
+		#else
+			<h2 class="coworker-title">${coworker.data}</h2>
+		#end
+		<div class="coworker-details-wrap">
+			#if($coworker.description.data != "")
+				<div class="description">
+					${coworker.description.data}
+				</div>
+			#end
+			
+			#if($coworker.phone.data != "")
+				<div class="">
+					<span class="label">Telefon: </span>${coworker.phone.data}
+				</div>
+			#end
+		
+			#if($coworker.email.data != "")
+				<div class="">
+					<span class="label">E-postadress: </span><a href="mailto:${coworker.email.data}">${coworker.email.data}</a>
+				</div>
+			#end
+		</div>
+		<div class="coworker-image-wrap">
+			#if($coworker.image.data != "")
+				<div class="">
+					<img src="${coworker.image.data}" alt="${coworker.data}" />
+				</div>
+			#else
+				&nbsp;
+			#end
+		</div>
+	</div>
+#end

@@ -1,0 +1,50 @@
+<root>
+	<dynamic-element name='image' type='image_gallery' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[V&auml;lj bild f&ouml;r push boxen (puffen).]]></entry>
+			<entry name="label"><![CDATA[Bild]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name='link' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in l&auml;nk till push boxens landningssida (t.ex. /web/guest/pagaende-fou).]]></entry>
+			<entry name="label"><![CDATA[L&auml;nk]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name='image-alt' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in en beskrivning av bildens inneh&aring;ll  - presenteras f&ouml;r t.ex. s&ouml;kmotorer och bes&ouml;kare med s.k. screen readers (synskadade i regel).]]></entry>
+			<entry name="label"><![CDATA[Beskrivning av bildens inneh&aring;ll]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name='link-target-blank' type='boolean' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[V&auml;lj om l&auml;nken skall &ouml;ppnas i ett nytt f&ouml;nster (eller tabb)]]></entry>
+			<entry name="label"><![CDATA[&Ouml;ppna l&auml;nk i nytt f&ouml;nster (eller tabb)]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element name='show-when' type='list' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[V&auml;lj n&auml;r artikeln ska visas.]]></entry>
+			<entry name="label"><![CDATA[Visa n&auml;r]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	    <dynamic-element name='Alltid' type='0' index-type='' repeatable='false'></dynamic-element>
+	    <dynamic-element name='Inloggad' type='1' index-type='' repeatable='false'></dynamic-element>
+	    <dynamic-element name='Utloggad' type='2' index-type='' repeatable='false'></dynamic-element>
+	</dynamic-element>
+</root>
