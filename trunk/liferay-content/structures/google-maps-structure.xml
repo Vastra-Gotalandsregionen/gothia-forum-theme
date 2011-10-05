@@ -1,0 +1,43 @@
+<root>
+	<dynamic-element name='placeTitle' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in ben&auml;mning p&aring; platsen.]]></entry>
+			<entry name="label"><![CDATA[Platsnamn]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	
+	<dynamic-element name='streetAddress' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in gatuadress.]]></entry>
+			<entry name="label"><![CDATA[Gatuadress]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element name='zipCode' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in postnummer.]]></entry>
+			<entry name="label"><![CDATA[Postnummer]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element name='city' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in postort.]]></entry>
+			<entry name="label"><![CDATA[Postort]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	
+	
+</root>

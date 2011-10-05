@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+URL:
+view-source:
+https://regionkalender.proxy.vgregion.se/RegionKalender/main.nsf/atom?openagent&text=gothia&start=08%2F30%2F2011&end=08%2F29%2F2012&days=365&show=2
+ -->
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>RegionKalender</title>
+	<updated>2011-08-30T15:06:42Z</updated>
+	<id>https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf
+	</id>
+	<entry>
+		<id>C2F9723AD6D7CADFC12578A0002B8F80</id>
+		<startdate>2011-09-12</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-09-12</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Introduktionskurs</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/C2F9723AD6D7CADFC12578A0002B8F80?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp, Göteborg</location>
+		<ort>Göteborg</ort>
+		<updated>2011-09-12T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>11</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Margareta Sandberg, 0702-003625&lt;p&gt; &lt;b&gt;Målgrupp: ...</summary>
+	</entry>
+	<entry>
+		<id>9D4A56E861C790ADC12578CB0033FA3B</id>
+		<startdate>2011-09-23</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-09-23</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Forstättningskurs 1 "Det beror på.."</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/9D4A56E861C790ADC12578CB0033FA3B?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp</location>
+		<ort>Göteborg</ort>
+		<updated>2011-09-23T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>17</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Camilla Palmqvist, 0722 - 039 269 &lt;p&gt; &lt;b&gt;Målgrup...</summary>
+	</entry>
+	<entry>
+		<id>C96BC11B7EAAF830C12578ED0026E94E</id>
+		<startdate>2011-09-30</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-09-30</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Forstättningskurs 2 - Att vara sponsor</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/C96BC11B7EAAF830C12578ED0026E94E?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp, Göteborg </location>
+		<ort>Göteborg</ort>
+		<updated>2011-09-30T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>17</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Camila Palmqvist, 0722-03 92 69&lt;p&gt; &lt;b&gt;Målgrupp: ...</summary>
+	</entry>
+	<entry>
+		<id>1290B48C9BF46D6BC12578A0002BC69A</id>
+		<startdate>2011-10-06</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-10-06</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Introduktionskurs</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/1290B48C9BF46D6BC12578A0002BC69A?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp, Göteborg</location>
+		<ort>Göteborg</ort>
+		<updated>2011-10-06T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>16</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Margareta Sandberg, 0702-003625&lt;p&gt; &lt;b&gt;Målgrupp: ...</summary>
+	</entry>
+	<entry>
+		<id>557B95640ACC944BC12578E2002667EF</id>
+		<startdate>2011-10-18</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-10-18</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Forstättningskurs 1 "Det beror på.."</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/557B95640ACC944BC12578E2002667EF?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp</location>
+		<ort>Göteborg</ort>
+		<updated>2011-10-18T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>16</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Camilla Palmqvist, 0722 - 039 269 &lt;p&gt; &lt;b&gt;Målgrup...</summary>
+	</entry>
+	<entry>
+		<id>3E76A5B605D7EC8DC12578ED002786CA</id>
+		<startdate>2011-11-11</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-11-11</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Forstättningskurs 2 - Att vara sponsor</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/3E76A5B605D7EC8DC12578ED002786CA?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp, Göteborg </location>
+		<ort>Göteborg</ort>
+		<updated>2011-11-11T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>20</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Camila Palmqvist, 0722-03 92 69&lt;p&gt; &lt;b&gt;Målgrupp: ...</summary>
+	</entry>
+	<entry>
+		<id>B1961A84A2EB8389C12578A0002BFD54</id>
+		<startdate>2011-12-01</startdate>
+		<starttime>08:30:00</starttime>
+		<enddate>2011-12-01</enddate>
+		<endtime>16:30:00</endtime>
+		<title>GCP Introduktionskurs</title>
+		<link href='https://regionkalender.proxy.vgregion.se/regionkalender/main.nsf/0/B1961A84A2EB8389C12578A0002BFD54?opendocument' />
+		<location>Sahlgrenska/SU, Lövet, Nya vårdbyggnaden, Bruna stråket 5, 1 trappa upp, Göteborg</location>
+		<ort>Göteborg</ort>
+		<updated>2011-12-01T08:30:00Z</updated>
+		<type>Utbildning</type>
+		<spaces>9</spaces>
+		<author>
+			<Name>Sahlgrenska Universitetssjukhuset</Name>
+		</author>
+		<summary type='html'>Gothia Forum i samarbete med läkemedelsindustrin anordnar GCP-utbildningar i 3 nivåer till självkostnadspris. &lt;p&gt; Vi har även möjlighet att utbilda på annan ort än Göteborg om det finns tillräckligt stort intresse. Är du intresserad av detta kontakta: Margareta Sandberg, 0702-003625&lt;p&gt; &lt;b&gt;Målgrupp: ...</summary>
+	</entry>
+</feed>

@@ -1,0 +1,59 @@
+##
+### Initialize Region Calendar Tool
+##
+
+#set ($regionCalendarTool =  $utilLocator.findUtil("custom-velocity-tools-rss-hook","com.monator.velocity.hook.regioncalendar.tool.RegionCalendarTool"))
+#set ($NULL =  $someNeverUsedVariable)
+
+##
+### Initialize feed variables
+##
+
+#set ($maxEntriesCount = $mathTool.toInteger($maxCount.data) )
+
+#if($maxEntriesCount == $NULL)
+	#set ($maxEntriesCount = 10)
+#end
+
+##
+### Initialize id variables
+##
+
+#set ($portletNamespace = $request.get('portlet-namespace'))
+
+#set($feed = $regionCalendarTool.parseFeed($feedURL.data, $maxEntriesCount))
+#set($feedEntries = $feed.getEntries())
+
+#if($feedEntries.size() > 0)
+	<div class="cal-wrap">
+		<h2>${heading.data}</h2>
+		<ul class="cal-list">
+			#foreach($feedEntry in $feedEntries)
+				<li class="clearfix">
+					<span class="cal-entry-date">
+						<span class="cal-entry-date-month">
+							$regionCalendarTool.getShortMonthText($feedEntry.startDate, $locale)
+						</span>
+						<span class="cal-entry-date-day">
+							$regionCalendarTool.getDateNumber($feedEntry.startDate, $locale)
+						</span>
+					</span>
+					<span class="cal-entry-content">
+						<span class="cal-entry-heading">
+							<a class="cal-link" href="${feedEntry.url}" target="_BLANK">${feedEntry.title}</a>
+						</span>
+						## Uncomment snippet below to show more info about calender location
+						#*
+							<span class="cal-entry-details">
+								Plats: ${feedEntry.location}
+							</span>
+						*#
+					</span>
+				</li>
+			#end
+			<li class="clearfix rss-item">
+				<a class="rss-link" href="${feedURL.data}" target="_BLANK">$languageUtil.get($locale, "rss-subscription")</a>
+			</li>
+		</ul>
+	</div>
+#end	

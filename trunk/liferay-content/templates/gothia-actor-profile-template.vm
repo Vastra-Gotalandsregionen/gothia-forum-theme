@@ -1,0 +1,190 @@
+<<<<<<< .mine
+#* ------ Define som variables ------------------------------------- *#
+#set ($NULL = $someNeverUsedVariable)
+
+#* ------ Services ------------------------------------- *#
+#set ($assetEntryLocalService = $serviceLocator.findService("com.liferay.portlet.asset.service.AssetEntryLocalService"))
+#set ($journalArticleResourceLocalService = $serviceLocator.findService("com.liferay.portlet.journal.service.JournalArticleResourceLocalService"))
+
+#* ------ Get Tags ------------------------------------- *#
+#set ($longGroupId = $getterUtil.getLong($groupId))
+
+#set ($articleResourcePK = $journalArticleResourceLocalService.getArticleResourcePrimKey($longGroupId, $reserved-article-id.data))
+#set ($assetEntry = $assetEntryLocalService.getEntry("com.liferay.portlet.journal.model.JournalArticle", $articleResourcePK))
+#if($assetEntry != $NULL)
+	#set ($tags = $assetEntry.getTags())
+#end
+
+#set($tagURL = "/sv/web/guest/sok-tjanst/-/sok/sokterm=" )
+
+<div class="actor-profile">
+	<h1>${actor-name.data}</h1>
+	<p class="parent-org">${org-name.data}</p>
+	#if($tags != $NULL)
+		#if($tags.size() > 0)
+			<ul class="actor-tags">
+				#foreach($tag in $tags)
+					<li><a href="${tagURL}${tag.name}">$tag.name</a></li>
+				#end
+			</ul>
+		#end
+	#end
+	<div class="aui-layout">
+		<div class="aui-layout-content">
+			<div class="aui-column aui-w60  aui-column-first">
+				<div class="aui-column-content aui-column-content-first">
+					<p class="intro">${intro.data}</p>
+					<div class="description">
+						${description.data}
+					</div>
+				</div>
+			</div>
+			<div class="aui-column aui-w40 aui-column-last">
+				<div class="aui-column-content aui-column-content-last">
+				
+					#if($logotype.data != "" && $logotype.data != "noLogo")
+						<div class="logo-wrap">
+							<img src="${logotype.data}&height=40&width=200" alt="${actor-name.data}" />
+						</div>
+					#end
+				
+					<div class="contact-box">
+						<ul class="cnt-list">
+							<li class="cnt-person">
+								<span class="cnt-label">Kontaktperson:</span>
+								<span class="cnt-data">
+									<div>${contact-name.data}</div>
+									<div>${contact-title.data}</div>
+								</span>
+							</li>
+							<li class="cnt-phone">
+								<span class="cnt-label">Telefon:</span>
+								<span class="cnt-data">
+									<div>${contact-phone.data}</div>
+									<div>${contact-mobile.data}</div>
+								</span>
+							</li>
+							<li class="cnt-email">
+								<span class="cnt-label">Epost:</span>
+								<span class="cnt-data">
+									#if($contact-email.data != "")
+										<a href="mailto:${contact-email.data}">$stringUtil.shorten($contact-email.data, 40)</a>
+									#end
+								</span>
+							</li>
+							<li class="cnt-web">
+								<span class="cnt-label">Webbplats:</span>
+								<span class="cnt-data">
+									#if($contact-webpage.data != "")
+										#set($contactWebpage = $stringUtil.replace($contact-webpage.data, "http://", ""))
+										<a href="http://${contactWebpage}">$stringUtil.shorten($contactWebpage, 40)</a>
+									#end
+								</span>
+							</li>
+							<li class="cnt-adress">
+								<span class="cnt-label">Bes&ouml;ksadress:</span>
+								<span class="cnt-data">${contact-address.data}</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>	
+=======
+#* ------ Define som variables ------------------------------------- *#
+#set ($NULL = $someNeverUsedVariable)
+
+#* ------ Services ------------------------------------- *#
+#set ($assetEntryLocalService = $serviceLocator.findService("com.liferay.portlet.asset.service.AssetEntryLocalService"))
+#set ($journalArticleResourceLocalService = $serviceLocator.findService("com.liferay.portlet.journal.service.JournalArticleResourceLocalService"))
+
+#* ------ Get Tags ------------------------------------- *#
+#set ($longGroupId = $getterUtil.getLong($groupId))
+
+#set ($articleResourcePK = $journalArticleResourceLocalService.getArticleResourcePrimKey($longGroupId, $reserved-article-id.data))
+#set ($assetEntry = $assetEntryLocalService.getEntry("com.liferay.portlet.journal.model.JournalArticle", $articleResourcePK))
+#if($assetEntry != $NULL)
+    #set ($tags = $assetEntry.getTags())
+#end
+
+#set($tagURL = "/sv/web/guest/sok-tjanst/-/sok/sokterm=" )
+
+<div class="actor-profile">
+    <h1>${actor-name.data}</h1>
+    <p class="parent-org">${org-name.data}</p>
+    #if($tags != $NULL)
+        #if($tags.size() > 0)
+            <ul class="actor-tags">
+                #foreach($tag in $tags)
+                    <li><a href="${tagURL}${tag.name}">$tag.name</a></li>
+                #end
+            </ul>
+        #end
+    #end
+    <div class="aui-layout">
+        <div class="aui-layout-content">
+            <div class="aui-column aui-w60  aui-column-first">
+                <div class="aui-column-content aui-column-content-first">
+                    <p class="intro">${intro.data}</p>
+                    <div class="description">
+                        ${description.data}
+                    </div>
+                </div>
+            </div>
+            <div class="aui-column aui-w40 aui-column-last">
+                <div class="aui-column-content aui-column-content-last">
+                
+                    #if($logotype.data != "" && $logotype.data != "noLogo")
+                        <div class="logo-wrap">
+                            <img src="${logotype.data}&height=40&width=200" alt="${actor-name.data}" />
+                        </div>
+                    #end
+                
+                    <div class="contact-box">
+                        <ul class="cnt-list">
+                            <li class="cnt-person">
+                                <span class="cnt-label">Kontaktperson:</span>
+                                <span class="cnt-data">
+                                    <div>${contact-name.data}</div>
+                                    <div>${contact-title.data}</div>
+                                </span>
+                            </li>
+                            <li class="cnt-phone">
+                                <span class="cnt-label">Telefon:</span>
+                                <span class="cnt-data">
+                                    <div>${contact-phone.data}</div>
+                                    <div>${contact-mobile.data}</div>
+                                </span>
+                            </li>
+                            <li class="cnt-email">
+                                <span class="cnt-label">Epost:</span>
+                                <span class="cnt-data">
+                                    #if($contact-email.data != "")
+                                        <a href="mailto:${contact-email.data}">$stringUtil.shorten($contact-email.data, 40)</a>
+                                    #end
+                                </span>
+                            </li>
+                            <li class="cnt-web">
+                                <span class="cnt-label">Webbplats:</span>
+                                <span class="cnt-data">
+                                    #if($contact-webpage.data != "")
+                                        #set($contactWebpage = $stringUtil.replace($contact-webpage.data, "http://", ""))
+                                        <a href="http://${contactWebpage}">$stringUtil.shorten($contactWebpage, 40)</a>
+                                    #end
+                                </span>
+                            </li>
+                            <li class="cnt-adress">
+                                <span class="cnt-label">Bes&ouml;ksadress:</span>
+                                <span class="cnt-data">${contact-address.data}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>  
+>>>>>>> .r15397
+</div>

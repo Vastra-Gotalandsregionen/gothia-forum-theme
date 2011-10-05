@@ -1,0 +1,16 @@
+<root>
+	<dynamic-element name='actor-name' type='text' index-type='' repeatable='false'></dynamic-element>
+	<dynamic-element name='org-name' type='text' index-type='' repeatable='false'></dynamic-element>
+	<dynamic-element name='intro' type='text_box' index-type='' repeatable='false'></dynamic-element>
+	<dynamic-element name='description' type='text_area' index-type='' repeatable='false'></dynamic-element>
+	<dynamic-element name='contact-webpage' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-name' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-title' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-phone' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-fax' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-address' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-mobile' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='contact-email' type='text' index-type='' repeatable='false'> </dynamic-element>
+	<dynamic-element name='logotype' type='image_gallery' index-type='' repeatable='false'></dynamic-element>
+	<dynamic-element name='actor-images' type='image_gallery' index-type='' repeatable='true'></dynamic-element>
+</root>

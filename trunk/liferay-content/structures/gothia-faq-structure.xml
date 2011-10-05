@@ -1,0 +1,20 @@
+<root>
+	<dynamic-element name='faqEntries' type='text_box' index-type='' repeatable='true'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv FAQ fr&aring;gan. Klicka p&aring; plustecknet f&ouml;r att l&auml;gga till en ny fr&aring;ga.]]></entry>
+			<entry name="label"><![CDATA[FAQ - Fr&aring;ga]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		<dynamic-element name='answer' type='text_area' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[true]]></entry>
+				<entry name="instructions"><![CDATA[Skriv svaret p&aring; FAQ fr&aring;gan.]]></entry>
+				<entry name="label"><![CDATA[FAQ - Svar]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+	</dynamic-element>
+</root>

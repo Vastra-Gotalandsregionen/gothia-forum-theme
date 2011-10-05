@@ -1,0 +1,104 @@
+##
+### Initialize RSS Tool
+##
+
+#set ($rssTool =  $utilLocator.findUtil("custom-velocity-tools-rss-hook","com.monator.velocity.hook.rss.tool.RSSTool"))
+#set ($NULL =  $someNeverUsedVariable)
+
+##
+### Initialize feed variables
+##
+
+##
+### Initialize id variables
+##
+
+#set ($portletNamespace = $request.get('portlet-namespace'))
+#set ($tabsWrapID = $portletNamespace + "tabsWrap")
+#set ($tabsListID = $portletNamespace + "tabsList")
+#set ($tabsContentID = $portletNamespace + "tabsContent")
+
+#set($feedCount = $rssFeedURL.siblings.size())
+
+#if($feedCount)
+	<div id="${tabsWrapID}" class="tabbed-rss aui-helper-hidden">
+	
+		<ul id="${tabsListID}" class="aui-tabview-list aui-widget-hd aui-tabview-3">
+			## Iterate feed titles
+			#set($curTabCount = 1)
+			#foreach($feed in $rssFeedURL.siblings)
+				#set($tabCssClass = "aui-tab")
+				#if($curTabCount >= $feedCount)
+					#set($tabCssClass = "aui-tab aui-tab-last")
+				#end
+				<li class="${tabCssClass}">
+					<a class="aui-tab-label" href="javascript:;">${feed.rssFeedLabel.data}</a>
+				</li>
+				#set($curTabCount = $curTabCount + 1)
+			#end			
+		</ul>
+		
+		<div id="${tabsContentID}" class="aui-tabview-content aui-widget-bd">
+			## Iterate feed content
+			
+			#foreach($feed in $rssFeedURL.siblings)
+				<ul class="feed-list aui-tabview-content-item__">
+				
+					#set ($maxFeedEntriesCount = $mathTool.toInteger($feed.maxCount.data) )
+					
+					#if($maxFeedEntriesCount == $NULL)
+						#set ($maxFeedEntriesCount = 10)
+					#end
+					
+					#if($stringUtil.startsWith($feed.data, "http://"))
+				
+						#set($feedEntries = $rssTool.readFeed($feed.data, $maxFeedEntriesCount))
+	
+						#foreach($feedEntry in $feedEntries)
+							<li class="clearfix">
+							
+								#set($entryTitle = $feedEntry.title)
+								#set($entryLink = $feedEntry.link)
+								
+								#set($entryPublishedDate = "&nbsp;")
+								#if($feedEntry.publishedDate != $NULL)
+									#set($entryPublishedDate = $dateUtil.getDate($feedEntry.publishedDate, "yyyy-MM-dd", $locale))
+								#end
+								
+								#set($entrySourceTitle = "")
+								
+								<a href="${entryLink}" target="_BLANK">
+									<span class="feed-date">
+										${entryPublishedDate}
+									</span>
+									<span class="feed-title">${entryTitle} ${entrySourceTitle}</span>
+								</a>
+							</li>						
+						#end
+						<li class="clearfix rss-item">
+							<a class="rss-link" href="${feed.data}" target="_BLANK">$languageUtil.get($locale, "rss-subscription")</a>
+						</li>
+					#else
+						<li class="aui-helper-hidden">Inget giltigt feed.</li>						
+					#end
+				</ul>
+			#end
+		</div>
+	</div>
+
+	<script type="text/javascript" charset="utf-8">
+	
+		AUI().ready('aui-base', 'aui-tabs', function(A) {
+		
+			var tabs1 = new A.TabView({
+				boundingBox: '#${tabsWrapID}',
+				listNode: '#${tabsListID}',
+				contentNode: '#${tabsContentID}'
+			});
+			
+			tabs1.get('boundingBox').show();
+
+			tabs1.render();
+		});
+	</script>
+#end

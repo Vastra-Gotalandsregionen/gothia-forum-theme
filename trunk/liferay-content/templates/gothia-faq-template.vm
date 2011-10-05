@@ -1,0 +1,8 @@
+#if($faqEntries.siblings.size() > 0)
+	<dl class="faq">
+		#foreach($faqEntry in $faqEntries.siblings)
+			<dt>${faqEntry.data}</dt>
+			<dd>${faqEntry.answer.data}</dd>
+		#end
+	</dl>
+#end

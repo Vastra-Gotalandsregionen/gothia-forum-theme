@@ -1,0 +1,10 @@
+<span class="result-item-title">
+	$stringUtil.shorten($actor-name.data, 80)
+</span>
+<span class="result-item-content">
+	#if($intro.data != "")
+		$stringUtil.shorten($intro.data, 200)
+	#elseif($description.data != "")
+		$stringUtil.shorten($description.data, 200)
+	#end
+</span>
