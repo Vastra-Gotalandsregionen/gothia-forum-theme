@@ -1,0 +1,9 @@
+<div id="googleTranslateWrap" class="google-translate-wrap"></div>
+<script type="text/javascript">
+	function googleTranslateElementInit() {
+		new google.translate.TranslateElement({
+			pageLanguage: 'sv',
+			layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+		}, 'googleTranslateWrap');
+	}
+</script>
