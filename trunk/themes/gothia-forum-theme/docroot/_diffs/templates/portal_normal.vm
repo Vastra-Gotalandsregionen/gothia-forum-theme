@@ -34,6 +34,7 @@
 					</div>
 				#end
 			</div>
+			
 			<div class="top-bar clearfix">
 				<div class="logo-wrap">
 					<hgroup id="heading">
@@ -54,7 +55,7 @@
 				</div>
 				
 				<div class="top-nav-wrap">
-					#if($google-translate-active)
+					#if($google_translate_active)
 						#parse ("$full_templates_path/google_translate.vm")
 					#end
 					#parse ("$full_templates_path/top_navigation.vm")
@@ -84,7 +85,7 @@
 				#end
 			</div>
 			<div class="aui-column aui-w30">
-				#if($add-this-active)
+				#if($add_this_active)
 					#parse ("$full_templates_path/sharing_add_this.vm")
 				#else
 					&nbsp;
@@ -110,18 +111,22 @@
 		#parse ("$full_templates_path/footer.vm")
 	</div>
 </footer>	
-
 $theme.include($bottom_include)
 #js ("$javascript_folder/gothia-theme-main.js")
 #js ("$javascript_folder/main-instance.js")
 
-#if($google-translate-active)
+#if($google_translate_active)
 	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 #end
 
-#if($add-this-active)
-	<script type="text/javascript" src="$add-this-widget-url-full"></script>
+#if($add_this_active)
+	<script type="text/javascript" src="$add_this_widget_url_full"></script>
 #end
+
+#if($piwik_active)
+	#parse ("$full_templates_path/piwik.vm")
+#end
+
 	
 </body>
 </html>
