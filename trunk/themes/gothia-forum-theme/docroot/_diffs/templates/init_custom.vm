@@ -82,6 +82,11 @@
 	#set($footer-col-4-content = "")
 #end
 
+
+## ---------- Google Translate ---------- ##
+
+#set($google-translate-active = false)
+
 ## ---------- Add This Sharing ---------- ##
 
 #set($add-this-active = true)
