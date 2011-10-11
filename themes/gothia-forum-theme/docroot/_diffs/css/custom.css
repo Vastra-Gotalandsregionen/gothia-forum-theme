@@ -115,6 +115,13 @@ body {
 	display: none;	
 }
 
+/* Google translate */
+
+.google-translate-wrap {
+	float: right;
+	position: relative;
+}
+
 /*------- content -------*/
 
 #content {

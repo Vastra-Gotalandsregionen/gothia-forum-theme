@@ -54,6 +54,9 @@
 				</div>
 				
 				<div class="top-nav-wrap">
+					#if($google-translate-active)
+						#parse ("$full_templates_path/google_translate.vm")
+					#end
 					#parse ("$full_templates_path/top_navigation.vm")
 				</div>
 			</div>
@@ -111,6 +114,10 @@
 $theme.include($bottom_include)
 #js ("$javascript_folder/gothia-theme-main.js")
 #js ("$javascript_folder/main-instance.js")
+
+#if($google-translate-active)
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+#end
 
 #if($add-this-active)
 	<script type="text/javascript" src="$add-this-widget-url-full"></script>
