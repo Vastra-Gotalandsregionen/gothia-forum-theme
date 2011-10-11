@@ -85,14 +85,24 @@
 
 ## ---------- Google Translate ---------- ##
 
-#set($google-translate-active = false)
+#set ($google_translate_active = $propsUtil.get("web.translate.google.translate.active"))
 
 ## ---------- Add This Sharing ---------- ##
 
-#set($add-this-active = true)
-#set($add-this-pub-id = "xa-4e5cc7cc3e20cfeb")
-#set($add-this-widget-url = "https://s7.addthis.com/js/250/addthis_widget.js")
-#set($add-this-widget-url-full = $add-this-widget-url + "#pubid=" + $add-this-pub-id)
+#set ($add_this_active = $propsUtil.get("web.sharing.addthis.active"))
+#set($add_this_pub_id = "xa-4e5cc7cc3e20cfeb")
+#set($add_this_widget_url = "https://s7.addthis.com/js/250/addthis_widget.js")
+#set($add_this_widget_url_full = $add_this_widget_url + "#pubid=" + $add_this_pub_id)
+
+
+## ---------- Piwik ---------- ##
+
+#set ($piwik_active = $propsUtil.get("web.tracking.piwik.active"))
+#set ($piwik_url = "http://piwik.vgregion.se/" )
+#set ($piwik_url_secure = "https://piwik.vgregion.se/" )
+#set ($piwik_url_no_script_img = "http://piwik.vgregion.se/piwik.php?idsite=77" )
+#set ($piwik_script_name = "piwik.js" )
+#set ($piwik_site_id = 77 )
 
 ## ---------- Language Support ---------- ##
 

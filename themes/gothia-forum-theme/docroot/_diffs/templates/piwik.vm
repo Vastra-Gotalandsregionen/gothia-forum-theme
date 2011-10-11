@@ -1,0 +1,14 @@
+<script type="text/javascript">
+	var pkBaseURL = ((document.location.protocol == 'https:') ? '$piwik_url_secure' : '$piwik_url');
+	document.write(unescape('%3Cscript src="' + pkBaseURL + '$piwik_script_name" type="text/javascript"%3E%3C/script%3E'));
+</script>
+<script type="text/javascript">
+	try {
+		var piwikTracker = Piwik.getTracker(pkBaseURL + 'piwik.php', $piwik_site_id);
+		piwikTracker.trackPageView();
+		piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+</script>
+<noscript>
+	<p><img src="$piwik_url_no_script_img" style="border:0" alt="" /></p>
+</noscript>
