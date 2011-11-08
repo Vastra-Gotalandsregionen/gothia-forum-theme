@@ -1,0 +1,72 @@
+<root>
+	<dynamic-element name='heading' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in artikelns rubrik.]]></entry>
+			<entry name="label"><![CDATA[Artikelrubrik]]></entry>
+			<entry name="predefinedValue"><![CDATA[Kontaktperson]]></entry>
+		</meta-data>
+	</dynamic-element>		
+
+	<dynamic-element name='contactPerson' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in medarbetarens namn.]]></entry>
+			<entry name="label"><![CDATA[Medarbetare - Namn]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		
+  		<dynamic-element name='title' type='text' index-type='' repeatable='false'>
+  			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in medarbetarens titel/roll (t.ex. Verksamhetschef).]]></entry>
+				<entry name="label"><![CDATA[Titel]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+  		<dynamic-element name='phone' type='text' index-type='' repeatable='false'>
+  			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in medarbetarens telefonnummer.]]></entry>
+				<entry name="label"><![CDATA[Telefonnummer]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+  		<dynamic-element name='email' type='text' index-type='' repeatable='false'>
+  			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in medarbetarens e-postadress.]]></entry>
+				<entry name="label"><![CDATA[E-postadress]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+  		<dynamic-element name='image' type='image_gallery' index-type='' repeatable='false'>
+  			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[V&auml;lj bild f&ouml;r medarbetaren.]]></entry>
+				<entry name="label"><![CDATA[Bild]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>		
+		
+	</dynamic-element>
+	
+	<dynamic-element name='marginTop' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv toppmarginal f&ouml;r kontaktblocket i pixlar. Anges utan enhet, dvs bara en siffra, t.ex. 20.]]></entry>
+			<entry name="label"><![CDATA[Toppmarginal]]></entry>
+			<entry name="predefinedValue"><![CDATA[20]]></entry>
+		</meta-data>
+	</dynamic-element>		
+</root>

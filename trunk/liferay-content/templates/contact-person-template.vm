@@ -1,0 +1,37 @@
+#set($NULL = $some-never-used-variable)
+
+#set($topMargin = 0)
+#if($marginTop.data != "")
+	#set($topMargin = $marginTop.data + "px")
+#end
+
+<div class="contact-info-wrap clearfix" style="margin-top: $topMargin;">
+	<h1>${heading.data}</h1>
+	
+	<div class="contact-info-block">
+		<div class="contact-info-item contact-info-name">${contactPerson.data}</div>
+		<div class="contact-info-item contact-info-title">${contactPerson.title.data}</div>
+	</div>
+	
+	#if($contactPerson.phone.data != "")
+		<div class="contact-info-block">
+			<div class="contact-info-item contact-info-label">Telefon</div>
+			<div class="contact-info-item">${contactPerson.phone.data}</div>
+		</div>
+	#end
+	
+	#if($contactPerson.email.data != "")
+		<div class="contact-info-block">
+			<div class="contact-info-item contact-info-label">Epost</div>
+			<div class="contact-info-item"><a href="mailto:${contactPerson.email.data}">${contactPerson.email.data}</a></div>
+		</div>
+	#end
+	
+	#if($contactPerson.image.data != "")
+		<div class="contact-info-block">
+				<div class="contact-info-image-wrap">
+					<img src="${contactPerson.image.data}" alt="${contactPerson.data}" />
+				</div>
+		</div>
+	#end
+</div>
