@@ -992,13 +992,13 @@ input.password {
 	padding: 10px;
 }
 
-.search-wrap p {
-	color: #fff;
-}
-
-.search-wrap p.search-intro {
+.search-wrap .search-intro {
 	background: url(../images/common/vgr-logo-red-matte.png) no-repeat 100% 5px;
 	padding-right: 180px;
+}
+
+.search-wrap .search-intro p {
+	color: #fff;
 }
 
 .search-wrap input[type="text"] {
