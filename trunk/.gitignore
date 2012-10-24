@@ -1,0 +1,11 @@
+.DS_Store
+
+.settings/*
+.classpath
+.project
+
+dist/*
+
+build.erik.properties
+build.patrik.properties
+build.simon.properties
