@@ -1,5 +1,10 @@
+.classpath
+.project
+.settings/*
+
 docroot/css/*
 docroot/fonts/*
 docroot/images/*
 docroot/js/*
 docroot/templates/*
+docroot/META-INF/*
