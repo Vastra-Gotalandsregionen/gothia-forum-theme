@@ -7,7 +7,7 @@
 	</compatibility>
 	<theme id="gothia-forum" name="Gothia Forum" />
 	
-	<theme id="gothia-forum" name="Gothia Forum Theme (with breadcrumbs)">
+	<theme id="gothia-forum" name="Gothia Forum Theme (Swedish with breadcrumbs)">
 		<root-path>/</root-path>
 		<templates-path>${root-path}/templates</templates-path>
 		<images-path>${root-path}/images</images-path>
@@ -15,12 +15,27 @@
 		<settings>
 			<setting key="bullet-style-options" value="1,2" />
 			<setting key="site-breadcrumbs" value="true" />
+			<setting key="language" value="swedish" />
 		</settings>
 		<roles>
 			<role-name>User</role-name>
 		</roles>
 	</theme>
-	<theme id="gothia-forum-2" name="Gothia Forum Theme (no breadcrumbs)">
+	<theme id="gothia-forum2" name="Gothia Forum Theme (English with breadcrumbs)">
+		<root-path>/</root-path>
+		<templates-path>${root-path}/templates</templates-path>
+		<images-path>${root-path}/images</images-path>
+		<template-extension>vm</template-extension>
+		<settings>
+			<setting key="bullet-style-options" value="1,2" />
+			<setting key="site-breadcrumbs" value="true" />
+			<setting key="language" value="english" />
+		</settings>
+		<roles>
+			<role-name>User</role-name>
+		</roles>
+	</theme>
+	<theme id="gothia-forum-3" name="Gothia Forum Theme (Swedish no breadcrumbs)">
 		<root-path>/</root-path>
 		<templates-path>${root-path}/templates</templates-path>
 		<images-path>${root-path}/images</images-path>
@@ -28,11 +43,26 @@
 		<settings>
 			<setting key="bullet-style-options" value="1,2" />
 			<setting key="site-breadcrumbs" value="false" />
-		</settings>
+            <setting key="language" value="swedish" />
+        </settings>
 		<roles>
 			<role-name>User</role-name>
 		</roles>
 	</theme>
-	
+	<theme id="gothia-forum-4" name="Gothia Forum Theme (English no breadcrumbs)">
+		<root-path>/</root-path>
+		<templates-path>${root-path}/templates</templates-path>
+		<images-path>${root-path}/images</images-path>
+		<template-extension>vm</template-extension>
+		<settings>
+			<setting key="bullet-style-options" value="1,2" />
+			<setting key="site-breadcrumbs" value="false" />
+            <setting key="language" value="english" />
+        </settings>
+		<roles>
+			<role-name>User</role-name>
+		</roles>
+	</theme>
+
 	
 </look-and-feel>

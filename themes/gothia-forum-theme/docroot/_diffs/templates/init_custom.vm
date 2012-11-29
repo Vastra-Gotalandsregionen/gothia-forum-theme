@@ -11,18 +11,34 @@
 
 ## ---------- URLs ---------- ##
 
-#set($page_contact_text = "Kontakt")
-#set($page_contact_url = "/kontakt")
+#if ($theme.getSetting("language") == "swedish")
+    #set($page_contact_text = "Kontakt")
+    #set($page_contact_url = "/kontakt")
 
-#set($site_english_text = "Engelska")
-#set($site_english_url = "")
+    #set($site_english_text = "In English")
+    #set($site_english_url = "/en/web/en")
 
-#set($vgr_text = "Till V&auml;stra G&ouml;talandsregionen")
-#set($vgr_url = "http://www.vgregion.se")
+    #set($vgr_text = "Till V&auml;stra G&ouml;talandsregionen")
+    #set($vgr_url = "http://www.vgregion.se")
 
-#set($profile_text = "V&aring;r sida")
-#set($profile_help_text = "H&auml;r kan du &auml;ndra er profil.")
-#set($profile_url = "/var-sida")
+    #set($profile_text = "V&aring;r sida")
+    #set($profile_help_text = "H&auml;r kan du &auml;ndra er profil.")
+    #set($profile_url = "/var-sida")
+#end
+#if ($theme.getSetting("language") == "english")
+    #set($page_contact_text = "Contact")
+    #set($page_contact_url = "/en/web/en/contact")
+
+    #set($site_english_text = "På svenska")
+    #set($site_english_url = "/")
+
+    #set($vgr_text = "To Region of Västra Götaland")
+    #set($vgr_url = "http://www.vgregion.se")
+
+    #set($profile_text = "")
+    #set($profile_help_text = "")
+    #set($profile_url = "")
+#end
 
 ## ---------- Theme settings ---------- ##
 
@@ -117,4 +133,4 @@
 
 ## ---------- Language Support ---------- ##
 
-#set($has-english-site = false)
+#set($has-english-site = true)
