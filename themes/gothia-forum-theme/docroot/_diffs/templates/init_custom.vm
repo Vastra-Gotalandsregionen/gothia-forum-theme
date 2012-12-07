@@ -11,7 +11,7 @@
 
 ## ---------- URLs ---------- ##
 
-#if ($theme.getSetting("language") == "swedish")
+#if ($theme.getSetting("language") == "swedish" || $theme.getSetting("language") == "english")
     #set($page_contact_text = "Kontakt")
     #set($page_contact_url = "/kontakt")
 
@@ -25,7 +25,7 @@
     #set($profile_help_text = "H&auml;r kan du &auml;ndra er profil.")
     #set($profile_url = "/var-sida")
 #end
-#if ($theme.getSetting("language") == "english")
+#if ($theme.getSetting("language") == "esperanto")
     #set($page_contact_text = "Contact")
     #set($page_contact_url = "/en/web/en/contact")
 
