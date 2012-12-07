@@ -16,7 +16,7 @@
     #set($page_contact_url = "/kontakt")
 
     #set($site_english_text = "In English")
-    #set($site_english_url = "/en/web/en")
+    #set($site_english_url = "/eng")
 
     #set($vgr_text = "Till V&auml;stra G&ouml;talandsregionen")
     #set($vgr_url = "http://www.vgregion.se")
