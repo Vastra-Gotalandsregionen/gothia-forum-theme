@@ -15,7 +15,7 @@
 		<li>
 			<a href="$sign_out_url"><span>$sign_out_text</span></a>|
 		</li>
-        #if($profile_url != "")
+        #if($profile_url != "" && $show-user-profile)
 		    <li class="profile-link">
                 <a href="$profile_url"><span>$profile_text</span></a>
                 <span class="profile-help">$profile_help_text</span>

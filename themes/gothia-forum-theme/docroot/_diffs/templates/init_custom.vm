@@ -43,7 +43,7 @@
 
 ## ---------- Pages ---------- ##
 
-## --- Footer --- ##
+## --- user profile --- ##
 
 #set( $show-user-profile-exp = "showUserPages" )
 
