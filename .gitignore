@@ -9,3 +9,5 @@ dist/*
 build.erik.properties
 build.patrik.properties
 build.simon.properties
+
+layouttpl/gothia-layouts-layouttpl/.settings
