@@ -40,6 +40,17 @@
     #set($profile_url = "")
 #end
 
+
+## ---------- Pages ---------- ##
+
+## --- Footer --- ##
+
+#set( $show-user-profile-exp = "showUserPages" )
+
+#set ( $show-user-profile = $expandoValueLocalService.getData($company_id, $class_name_group, $expando_default_table, $show-user-profile-exp, $group_id, false) )
+
+
+
 ## ---------- Theme settings ---------- ##
 
 #set($use_site_breadcrumbs = true)
