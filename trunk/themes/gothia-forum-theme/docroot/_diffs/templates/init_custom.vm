@@ -9,30 +9,42 @@
 
 #set($expando_default_table = "CUSTOM_FIELDS")
 
+##--------------------------------------------------------------------------
+## Define some services
+##--------------------------------------------------------------------------
+
+#set($layoutLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+#set($layoutSetLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService"))
+
+#set($journalArticleLocalService = $serviceLocator.findService("com.liferay.portlet.journal.service.JournalArticleLocalService"))
+
+
 ## ---------- URLs ---------- ##
 
-#if ($theme.getSetting("language") == "swedish" || $theme.getSetting("language") == "english")
-    #set($page_contact_text = "Kontakt")
-    #set($page_contact_url = "/kontakt")
+#set ($theme-setting-language = $theme.getSetting("language"))
 
-    #set($site_english_text = "In English")
-    #set($site_english_url = "/eng")
+#set($page_contact_text = "Kontakt")
+#set($page_contact_url = "/kontakt")
 
-    #set($vgr_text = "Till V&auml;stra G&ouml;talandsregionen")
-    #set($vgr_url = "http://www.vgregion.se")
+#set($site_english_text = "In English")
+#set($site_english_url = "/eng")
 
-    #set($profile_text = "V&aring;r sida")
-    #set($profile_help_text = "H&auml;r kan du &auml;ndra er profil.")
-    #set($profile_url = "/var-sida")
-#end
-#if ($theme.getSetting("language") == "esperanto")
+#set($vgr_text = "Till V&auml;stra G&ouml;talandsregionen")
+#set($vgr_url = "http://www.vgregion.se")
+
+#set($profile_text = "V&aring;r sida")
+#set($profile_help_text = "H&auml;r kan du &auml;ndra er profil.")
+#set($profile_url = "/var-sida")
+
+
+#if ($theme-setting-language == "english")
     #set($page_contact_text = "Contact")
     #set($page_contact_url = "/en/web/en/contact")
 
-    #set($site_english_text = "På svenska")
+    #set($site_english_text = "P&aring; svenska")
     #set($site_english_url = "/")
 
-    #set($vgr_text = "To Region of Västra Götaland")
+    #set($vgr_text = "To Region of V&auml;stra Götaland")
     #set($vgr_url = "http://www.vgregion.se")
 
     #set($profile_text = "")
@@ -60,6 +72,21 @@
 #end
 
 ## ---------- Web Content ---------- ##
+
+## --- Header --- ##
+#set( $top-navigation-exp = "gothiaTopNavigationArticleId" )
+
+#set ( $top-navigation-content-id = $expandoValueLocalService.getData($company_id, $class_name_group, $expando_default_table, $top-navigation-exp, $group_id, "") )
+
+## --- Top Navigation --- ##
+	
+#set ($top-navigation-template-id=$null)
+#set($top-navigation-content=$journalContentUtil.getContent($group_id, $top-navigation-content-id, $top-navigation1-template-id, "$locale", $theme_display))
+
+#if($top-navigation-content == $null)
+	#set($top-navigation-content = "")
+#end
+
 
 ## --- Footer --- ##
 
@@ -145,3 +172,29 @@
 ## ---------- Language Support ---------- ##
 
 #set($has-english-site = true)
+
+#set( $site-language-exp = "gothiaSiteLanguage" )
+#set( $site-language-default = "sv_SE" )
+
+#set ( $site-language = $expandoValueLocalService.getData($company_id, $class_name_group, $expando_default_table, $site-language-exp, $group_id, $site-language-default) )
+
+## Comment: expando setting for language is used in portlets. In theme, use theme settings instead.
+
+#set ( $is_site_swedish = false )
+#set ( $is_site_english = false )
+
+#*
+    #if($site-language == "sv_SE")
+    	#set ( $is_site_swedish = true )	
+    #elseif($site-language == "en_US")
+    	#set ( $is_site_english = true )
+    #end	
+*#
+
+#if($theme-setting-language == "swedish")
+	#set ( $is_site_swedish = true )	
+#elseif($theme-setting-language == "english")
+	#set ( $is_site_english = true )
+#end	
+
+
