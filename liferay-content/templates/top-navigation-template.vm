@@ -1,0 +1,114 @@
+## Define some services
+#set ($expandoValueLocalService = $serviceLocator.findService("com.liferay.portlet.expando.service.ExpandoValueLocalService"))
+#set ($groupLocalService = $serviceLocator.findService("com.liferay.portal.service.GroupLocalService"))
+#set ($layoutLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+#set ($layoutSetLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService"))
+
+##Define variables
+#set ($null = $some-never-used-variable)
+#set ($themeDisplay = $request.get('theme-display'))
+#set ($isSignedIn = $request.get("remote-user") != "" )
+#set ($scopePlid = $getterUtil.getLong($themeDisplay.get('plid')))
+#set ($scopeLayout = $layoutLocalService.getLayout($scopePlid))
+#set ($companyIdLong = $getterUtil.getLong($companyId))
+#set ($groupIdLong = $getterUtil.getLong($groupId))
+#set ($scopeGroup = $groupLocalService.getGroup($groupIdLong))
+#set ($urlPrefix = "")
+
+#set($scopeLayoutSet = $layoutSetLocalService.getLayoutSet($groupIdLong, $scopeLayout.isPrivateLayout()))
+#set($scopeLayoutSetVirtualHost = $scopeLayoutSet.getVirtualHostname())
+#set($hasVirtualHost = false)
+
+#if($scopeLayoutSetVirtualHost != $null && $scopeLayoutSetVirtualHost != "")
+	#set($hasVirtualHost = true)
+#end
+
+#if(!$hasVirtualHost)
+
+	#if($scopeLayout.isPrivateLayout())
+		#set($urlPrefix = "/group")
+	#else
+		#set($urlPrefix = "/web")
+	#end
+	
+	#set($urlPrefix = $urlPrefix + $scopeGroup.getFriendlyURL())
+
+#end
+
+##Language
+#*
+    #set ( $isSiteSwedish = false )
+    #set ( $isSiteEnglish = false )
+    
+    
+    #set ( $siteLanguage = $expandoValueLocalService.getData($companyIdLong, "com.liferay.portal.model.Group", "CUSTOM_FIELDS", "gothiaSiteLanguage", $groupIdLong, "sv_SE") )
+    
+    #if($siteLanguage == "sv_SE")
+    	#set ( $isSiteSwedish = true )	
+    #elseif($siteLanguage == "en_US")
+    	#set ( $isSiteEnglish = true )
+    #end	
+    
+    <p>user: $languageUtil.get("en_US", "user")</p>
+*#
+
+#if($links.siblings.size() > 0)
+
+	<ul class="top-navigation-list clearfix">
+		#foreach($link in $links.siblings)
+			
+    		#set($linkURL = "")
+    		
+    		## External Link
+    		#if($link.externalLink.data != "")
+    			#set($linkURL = ${link.externalLink.data})
+    		## Internal Link	
+    		#else
+            	#set($linkLayoutId = $getterUtil.getLong($link.internalLink.data))
+            	#set ($linkLayout = $layoutLocalService.getLayout($groupIdLong, $scopeLayout.isPrivateLayout(), $linkLayoutId))
+            	#set($linkURL = $urlPrefix + $linkLayout.getFriendlyURL())
+    			#set($linkURL = "#internal")
+    		#end
+    		
+    		#set($targetForLink = "")
+    		#if($link.linkTarget.data == "_BLANK")
+    			#set($targetForLink = "_BLANK")	
+    		#end
+        	
+    		<li>
+                <a href="${linkURL}" target="${targetForLink}">
+        			${link.data}
+        		</a>
+            </li>
+		#end
+		#if($isSignedIn)
+			#if($linkSignout.data != "")
+                <li>
+                    <a href="/c/portal/logout">${linkSignout.data}</a>
+    			</li>
+			#end
+			##Temp
+			#set($showProfileLink = true)
+			#if($showProfileLink)
+				#set($profileUrl = "")
+    		
+            	#set($profileLayoutId = $getterUtil.getLong($linkProfile.internalLink.data))
+            	#set ($profileLayout = $layoutLocalService.getLayout($groupIdLong, $scopeLayout.isPrivateLayout(), $linkLayoutId))
+            	#set($profileUrl = $urlPrefix + $profileLayout.getFriendlyURL())
+				
+                <li class="profile-link">
+					<a href="${profileUrl}"><span>${linkProfile.data}</span></a>
+					#if($linkProfile.help.data != "")
+                    <span class="profile-help">${linkProfile.help.data}</span>
+					#end
+    			</li>
+			#end	
+		#else
+			#if($linkSignin.data != "")
+                <li>
+                    <a href="/c/portal/login">${linkSignin.data}</a>
+    			</li>
+			#end
+		#end
+	</ul>
+#end

@@ -109,6 +109,10 @@ body {
     width: 243px;
 }
 
+.english #header a.logo {
+	background-image: url(../images/common/gothia-forum-logo-eng.png);
+}
+
 #header h2.community-title,
 #header h3.page-title {
 	display: none;	

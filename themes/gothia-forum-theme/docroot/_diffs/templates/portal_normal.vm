@@ -19,6 +19,10 @@
 	<![endif]-->
 </head>
 
+#if($is_site_english)
+	#set($css_class = $css_class + " english")	
+#end
+
 <body class="$css_class">
 
 #if($is_signed_in)
@@ -26,7 +30,7 @@
 #end
 
 <div id="wrap">
-
+	
 	<header id="header" role="header">
 		<div class="header-inner grid-960 clearfix">
 			<div class="aui-column aui-w100">
