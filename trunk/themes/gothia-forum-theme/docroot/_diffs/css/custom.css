@@ -1981,3 +1981,274 @@ ul.cal-list li .cal-entry-details {
 	background: transparent url(../images/temp/footer-temp-img.jpg) 0 0 no-repeat;
 	height: 260px;
 }
+
+/* ---------- New Search ---------- */
+
+.gothia-search-wrap {
+	background: #efede3;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border-top: 6px solid #0273ac;
+	margin: 10px 0;
+	padding: 12px;	
+}
+
+.gothia-search-wrap .gothia-search-input {
+	display: block;
+	margin-right: 85px;
+}
+
+.gothia-search-wrap .gothia-search-input > .aui-field-content {
+	background: #fff;
+	border: 1px solid #c4ced5;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	width: 99%;	
+}
+
+.gothia-search-wrap .gothia-search-input > .aui-field-content > .aui-field-element {
+	display: block;
+	padding: 4px;
+	overflow: hidden;
+}
+
+.gothia-search-wrap .gothia-search-button {
+	display: block;
+	float: right;
+	position: relative;
+	width: 80px;
+}
+
+.gothia-search-wrap .gothia-search-input .aui-combobox-content .aui-field-content {
+	display: block;
+}
+
+.gothia-search-wrap .gothia-search-input .aui-toolbar {
+	display: none;
+}
+
+.gothia-search-wrap input[type="text"],
+.gothia-search-wrap input[type="submit"] {
+	font-family: "Droid Sans", Arial, Verdana, Helvetica, sans-serif;
+	position: relative;
+}
+
+.gothia-search-wrap input[type="text"] {
+	background: #fff url(../images/icons/search-icon.png) 4px 2px no-repeat;
+	border: none;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-khtml-box-sizing: border-box;
+	box-sizing: border-box;	
+	display: block;
+	font-size: 16px;
+	padding: 6px;
+	padding-left: 41px;
+	width: 100%;
+}
+
+.ie6 .gothia-search-wrap input[type="text"],
+.ie7 .gothia-search-wrap input[type="text"] {
+	/* Fixes issue with box overflow when setting width 100% and padding, borders, margin etc for ie6 and ie7 */
+	behavior: url(/gothia-forum-theme/htc/boxsizing.htc);
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.gothia-search-wrap input[type="submit"] {
+	background: #2865ad url(../images/btn/button-bg-normal.png) 0 0 repeat-x;
+	border: 1px solid #2f71a8;
+	border-color: #2f71a8 #052a73 #052a73 #2f71a8;  
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 10px 15px;
+	position: relative;
+	text-align: center;
+	text-shadow: none;
+}
+
+/*- Auto Complete -*/
+
+/*
+.aui-autocomplete-results-content {
+	-moz-border-radius: 0 0 3px 3px;
+	-webkit-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;	
+	border: 1px solid #e4edf9;
+	-moz-box-shadow: 1px 1px 4px #777;
+	-webkit-box-shadow: 1px 1px 4px #777;
+	box-shadow: 1px 1px 4px #777;
+	min-height: 40px;
+	height: 100%;
+	overflow-y: auto;
+	position: relative;
+}
+
+.aui-autocomplete-list-item {
+	border: 1px solid #fff;
+	font-size: 16px;
+	list-style: none;
+	margin: 0;
+	padding: 3px 3px;
+}
+
+.aui-autocomplete-selected {
+	background: #e4edf9;
+	border-color: #005095;
+}
+*/
+
+/* ---------- New Search Results ---------- */
+
+ul.gothia-list {
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 0;
+}
+
+ul.gothia-list > li {
+	background: #f5f4ee;
+	border: 1px solid #d5d3ca;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: block;
+	list-style-type: none;
+	margin: 15px 0;
+	padding: 15px;
+}
+
+ul.gothia-list > li.gothia-list-item-odd {
+	background: #fcfbf9;
+}
+
+ul.gothia-list > li a {
+	text-decoration: none;
+}
+
+ul.gothia-list > li a:hover {
+	text-decoration: underline;
+}
+
+ul.gothia-list > li .title {
+	margin: 0 0 10px 0;
+}
+
+ul.gothia-list > li .title h3 {
+	color: #cc071e;
+	display: block;
+	font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.7em;
+	font-weight: normal;
+	line-height: 1.0;
+	margin: 0;
+}
+
+ul.gothia-list > li .title h3 a {
+	color: #cc071e;
+}
+
+ul.gothia-list > li .title .subtitle {
+	color: #666;
+	display: block;
+	font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: normal;
+	line-height: 1.0;
+	margin: 5px 0 0 0;
+}
+
+ul.gothia-list > li .content {
+	color: #333;
+	line-height: 1.4;
+	margin: 0;
+	padding: 0; 
+}
+
+ul.gothia-list > li .content a {
+	color: #333;
+}
+
+ul.gothia-list > li .meta {
+	margin: 10px 0 0 0;
+}
+
+ul.gothia-list ul.search-tags {
+	background: transparent url(../images/icons/icon-tag-blue.png) 0 0 no-repeat;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 24px;
+}
+
+ul.gothia-list ul.search-tags li {
+	display: inline;
+	padding: 0 5px 0 0;
+}
+
+.actor-profile ul.search-tags li a {}
+
+/* ---------- Gothia Paging ---------- */
+
+ul.gothia-paging {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.gothia-paging li {
+	float: left;
+	margin: 0 10px;
+	position: relative;
+}
+
+ul.gothia-paging a,
+ul.gothia-paging span {
+	background: #fcfcfc;
+	border: 1px solid #d8dde2;
+	display: block;
+	font-size: 14px;
+	height: 14px;
+	line-height: 1.0;
+	padding: 8px 3px;
+	text-align: center;
+	width: 30px;
+}
+
+ul.gothia-paging a {
+	color: #47618f;
+}
+
+ul.gothia-paging span {
+	background: #f0f0f0;
+	border-color: #c7ced5;
+	color: #424242;
+}
+
+ul.gothia-paging .previous a,
+ul.gothia-paging .next a {
+	background: #5175a4;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-color: #5b86c0;
+	font-size: 0;
+	text-indent: -9999em;
+}
+
+
+ul.gothia-paging .previous a {
+	background-image: url(../images/icons/arrow-left.png);
+}
+
+ul.gothia-paging .next a {
+	background-image: url(../images/icons/arrow-right.png);
+}
