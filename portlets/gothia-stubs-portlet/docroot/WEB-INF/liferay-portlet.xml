@@ -8,6 +8,12 @@
 		<instanceable>true</instanceable>
 		<css-class-wrapper>gothia-actors-search-stub-portlet</css-class-wrapper>
 	</portlet>
+	<portlet>
+		<portlet-name>gothia-actors-search-result-stub</portlet-name>
+		<icon>/icon.png</icon>
+		<instanceable>true</instanceable>
+		<css-class-wrapper>gothia-actors-search-result-stub-portlet</css-class-wrapper>
+	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>
 		<role-link>Administrator</role-link>
