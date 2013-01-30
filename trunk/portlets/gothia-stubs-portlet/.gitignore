@@ -1,0 +1,11 @@
+.DS_Store
+
+.settings/*
+.classpath
+.project
+
+docroot/WEB-INF/classes
+docroot/WEB-INF/tld
+docroot/WEB-INF/lib
+
+docroot/WEB-INF/src/rebel.xml
