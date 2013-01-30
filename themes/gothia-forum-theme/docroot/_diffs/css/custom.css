@@ -1580,6 +1580,7 @@ a.rss-link {
 
 /*------- Search Results List -------*/
 
+/*
 ul.gothia-search-results-list {
 	list-style-type: none;
 	margin: 0 -10px;
@@ -1650,6 +1651,97 @@ ul.gothia-search-results-list li a:hover .result-item-title {
 ul.gothia-search-results-list li a:hover .result-item-content {
 	display: block;
 }
+*/
+
+/*------- Search Results List New -------*/
+
+ul.gothia-search-results-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.gothia-search-results-list li {
+	display: block;
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 0;
+}
+
+ul.gothia-search-results-list li a {
+	background: #f5f4ee;
+	border: 1px solid #d5d3ca;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	display: block;
+	margin: 0;
+	padding: 12px;
+	text-decoration: none;
+}
+
+ul.gothia-search-results-list .result-item-title {
+	color: #cc071e;
+	display: block;
+	font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.0;
+	margin: 0 0 10px 0;
+}
+
+ul.gothia-search-results-list .result-item-content {
+	color: #333;
+	font-size: 1.0em;
+	line-height: 1.1;
+}
+
+
+/*
+ul.gothia-search-results-list .result-item-title,
+ul.gothia-search-results-list .result-item-content {
+	height: 120px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}	
+
+ul.gothia-search-results-list .result-item-title {
+	color: #cc071e;
+	display: block;
+	font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.3em;
+}
+
+ul.gothia-search-results-list .result-item-content {
+	color: #222;
+	display: none;
+	font-size: 1.0em;
+}
+
+ul.gothia-search-results-list .result-item-content p {
+
+}
+
+ul.gothia-search-results-list li a:hover {
+	cursor: pointer;
+	background: #cc071e;
+	text-decoration: none;
+}
+
+ul.gothia-search-results-list li a:hover .result-item-title,
+ul.gothia-search-results-list li a:hover .result-item-content {
+	color: #fff;
+	cursor: pointer;
+}
+
+ul.gothia-search-results-list li a:hover .result-item-title {
+	display: none;
+}
+
+ul.gothia-search-results-list li a:hover .result-item-content {
+	display: block;
+}
+*/
 
 /*------- Banner Box Carousel -------*/
 
