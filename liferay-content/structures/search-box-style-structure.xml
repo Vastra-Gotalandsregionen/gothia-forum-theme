@@ -1,0 +1,48 @@
+<root>
+	<dynamic-element name='images' type='image_gallery' index-type='' repeatable='true'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[V&auml;lj bild i bildgalleriet.]]></entry>
+			<entry name="label"><![CDATA[Bild]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		<dynamic-element name='link' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in l&auml;nk till sida dit anv&auml;ndaren kommer om denne klickar p&aring; bilden.]]></entry>
+				<entry name="label"><![CDATA[Bildl&auml;nk]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name='alt' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in en beskrivning av bildens inneh&aring;ll  - presenteras f&ouml;r t.ex. s&ouml;kmotorer och bes&ouml;kare med s.k. screen readers (synskadade i regel).]]></entry>
+				<entry name="label"><![CDATA[Beskrivning av bildens inneh&aring;ll]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name='targetBlank' type='boolean' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[V&auml;lj om l&auml;nken skall &ouml;ppnas i ett nytt f&ouml;nster (eller tabb)]]></entry>
+				<entry name="label"><![CDATA[&Ouml;ppna l&auml;nk i nytt f&ouml;nster (eller tabb)]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+	</dynamic-element>
+	
+	<dynamic-element name='content' type='text_area' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in br&ouml;dtext f&ouml;r artikeln.]]></entry>
+				<entry name="label"><![CDATA[Br&ouml;dtext]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+	</dynamic-element>
+</root>
