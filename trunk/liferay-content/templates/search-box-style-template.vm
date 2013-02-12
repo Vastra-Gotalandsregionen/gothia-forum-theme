@@ -1,0 +1,36 @@
+<div class="search-box">
+	<div class="search-box-hd">
+        <div class="banner-box">
+        	#set($is_first_image = true)
+        
+        	## Loop all images
+        	#foreach($image in $images.siblings)
+        
+        		## Define some properties needed for each image
+        		#set($link_class = "banner-box-link")
+        		
+        		#if(!$is_first_image)
+        			#set($link_class = "banner-box-link aui-helper-hidden")
+        		#end
+        		
+        		#set($image_target = "")
+        		#if($image.targetBlank.data == "true")
+        			#set($image_target = "_BLANK")
+        		#end
+        		
+        		<a href="${image.link.data}" class="${link_class}" target="$image_target">
+        			<img src="${image.data}" alt="${image.alt.data}" />
+        		</a>
+        		
+        		#set($is_first_image = false)
+        	#end
+        </div>
+	</div>
+	<div class="search-box-bd">
+		<div class="search-wrap">
+			<div class="search-intro">
+				${content.data}
+			</div>
+		</div>
+	</div>
+</div>
