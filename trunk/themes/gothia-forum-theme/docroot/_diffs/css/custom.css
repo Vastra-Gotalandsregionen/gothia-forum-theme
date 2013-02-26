@@ -2195,7 +2195,10 @@ ul.gothia-list ul.search-tags li {
 	padding: 0 5px 0 0;
 }
 
-.actor-profile ul.search-tags li a {}
+ul.gothia-list > li .hit {
+	font-style: italic;
+	font-weight: bold;
+}
 
 /* ---------- Gothia Paging ---------- */
 
