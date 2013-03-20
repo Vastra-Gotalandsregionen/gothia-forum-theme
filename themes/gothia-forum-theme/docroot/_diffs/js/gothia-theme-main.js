@@ -16,7 +16,8 @@ AUI().add('gothia-theme-main',function(A) {
 		NAME = 'gothia-theme-main',
 		NS = 'gothia-theme-main',
 		
-		REGEXP_DATE = /[0-9]{4}\-{1}[0-9]{2}\-{1}[0-9]{2}/ // Matches date on the form YYYY-MM-DD
+		REGEXP_DATE = /[0-9]{4}\-{1}[0-9]{2}\-{1}[0-9]{2}/, // Matches date on the form YYYY-MM-DD
+		REGEXP_DATE_EN = /[0-9]{1,2}\/{1}[0-9]{1,2}\/{1}[0-9]{2}/ // Matches date on the form MM/DD/YY (or M/D/YY)
 	;
 	
 	var TPL_REGION_CALENDAR_IFRAME = '<iframe class="region-calendar-iframe" title="" frameborder="0" src="{url}" width="1044" height="600"></iframe>'
@@ -83,6 +84,13 @@ AUI().add('gothia-theme-main',function(A) {
 								var newDateArr = dateStr.match(REGEXP_DATE);
 								if(newDateArr) {
 									node.html(newDateArr[0]);
+								}
+								else {
+									newDateArr = dateStr.match(REGEXP_DATE_EN);
+									
+									if(newDateArr) {
+										node.html(newDateArr[0]);
+									}
 								}
 								
 								// Move date node to the start of the info block
