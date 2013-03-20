@@ -15,13 +15,13 @@
 			
 			#if($coworker.phone.data != "")
 				<div class="">
-					<span class="label">Telefon: </span>${coworker.phone.data}
+					<span class="label">Phone: </span>${coworker.phone.data}
 				</div>
 			#end
 		
 			#if($coworker.email.data != "")
 				<div class="">
-					<span class="label">Epost: </span><a href="mailto:${coworker.email.data}">${coworker.email.data}</a>
+					<span class="label">Email: </span><a href="mailto:${coworker.email.data}">${coworker.email.data}</a>
 				</div>
 			#end
 		</div>
