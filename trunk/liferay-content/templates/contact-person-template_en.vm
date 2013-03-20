@@ -15,14 +15,14 @@
 	
 	#if($contactPerson.phone.data != "")
 		<div class="contact-info-block">
-			<div class="contact-info-item contact-info-label">Telefone</div>
+			<div class="contact-info-item contact-info-label">Phone</div>
 			<div class="contact-info-item">${contactPerson.phone.data}</div>
 		</div>
 	#end
 	
 	#if($contactPerson.email.data != "")
 		<div class="contact-info-block">
-			<div class="contact-info-item contact-info-label">Epost</div>
+			<div class="contact-info-item contact-info-label">Email</div>
 			<div class="contact-info-item"><a href="mailto:${contactPerson.email.data}">${contactPerson.email.data}</a></div>
 		</div>
 	#end
