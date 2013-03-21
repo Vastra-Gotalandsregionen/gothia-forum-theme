@@ -1001,6 +1001,10 @@ input.password {
 	padding-right: 180px;
 }
 
+.english .search-wrap .search-intro {
+	background-image: url(../images/common/vgr-logo-red-matte-eng.png);
+}
+
 .search-wrap .search-intro p {
 	color: #fff;
 }
