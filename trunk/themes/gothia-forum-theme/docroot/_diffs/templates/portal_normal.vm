@@ -119,6 +119,9 @@
 	</div>
 </footer>	
 $theme.include($bottom_include)
+
+<script src="//www.youtube.com/player_api"></script>
+
 #js ("$javascript_folder/gothia-theme-main.js")
 #js ("$javascript_folder/main-instance.js")
 

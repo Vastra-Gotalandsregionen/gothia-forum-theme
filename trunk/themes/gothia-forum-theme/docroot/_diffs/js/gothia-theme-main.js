@@ -38,6 +38,7 @@ AUI().add('gothia-theme-main',function(A) {
 				NS: NS,
 				prototype: {
 					bannerCarousel: null,
+					bannerVideoPlaying: false,
 					initializer: function(config) {
 						var instance = this;
 						
@@ -159,6 +160,86 @@ AUI().add('gothia-theme-main',function(A) {
 
 						bannerBox.all('a.banner-box-link').removeClass('aui-helper-hidden');
 						bannerBox.addClass('banner-box-js');
+						
+						bannerBox.on('mouseenter', function(e) {
+							instance.bannerCarousel.pause();	
+						}, instance);
+						
+						bannerBox.on('mouseleave', function(e) {
+							if(!instance.bannerVideoPlaying) {
+								instance.bannerCarousel.play();	
+							}
+						}, instance);
+						
+						var movieWraps = bannerBox.all('.movie-ctn');
+						
+						// Init movie players
+						movieWraps.each(function(item, index, list) {
+							
+							var videoId = item.getAttribute('data-videoId');
+							var nodeId = item.getAttribute('id');
+							
+							if(nodeId == "") {
+								nodeId = item.guid();
+							}
+							
+							if(YT != null) {
+								var onPlayerReady = function() {
+								}
+								
+								var onStateChange = function(event) {
+									
+									var player = event.target;
+									var playerStatus = event.data;
+									
+									if(playerStatus == 1) {
+										
+										instance.bannerVideoPlaying = true;
+										
+										if(instance.bannerCarousel) {
+											instance.bannerCarousel.pause();
+										}
+									}
+									else {
+										instance.bannerVideoPlaying = false;
+										
+										if(instance.bannerCarousel) {
+											instance.bannerCarousel.play();	
+										}
+									}
+								}
+
+								/* */
+					            var player = new YT.Player(nodeId, {
+									height: '200',
+									width: '356',
+									videoId: videoId,
+  
+									playerVars: {
+										//controls: 0,
+										//showinfo: 0 ,
+										modestbranding: 1,
+										wmode: 'opaque'
+									},					              
+					              
+									events: {
+										'onReady': onPlayerReady
+									}
+					            });
+					            
+					            
+					            if(A.one('body').hasClass('ie7')) {
+					            	player.attachEvent('onStateChange', onStateChange);
+					            } else {
+					            	player.addEventListener('onStateChange', onStateChange);
+					            }
+								
+							}
+						});
+					},
+					
+					getFoo: function() {
+						return 'bar';
 					},
 					
 					_initFAQ: function() {
@@ -266,7 +347,8 @@ AUI().add('gothia-theme-main',function(A) {
 			'aui-base',
 			'aui-carousel',
 			'aui-dialog',
-			'anim-node-plugin'
+			'anim-node-plugin',
+			'event-mouseenter'
       ]
 	}
 );

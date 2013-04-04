@@ -1,5 +1,5 @@
 <div class="banner-box">
-	#set($is_first_image = true)
+	#set($item_index = 0)
 
 	## Loop all images
 	#foreach($image in $images.siblings)
@@ -7,7 +7,7 @@
 		## Define some properties needed for each image
 		#set($link_class = "banner-box-link")
 		
-		#if(!$is_first_image)
+		#if($item_index != 0)
 			#set($link_class = "banner-box-link aui-helper-hidden")
 		#end
 		
@@ -16,11 +16,22 @@
 			#set($image_target = "_BLANK")
 		#end
 		
-		<a href="${image.link.data}" class="${link_class}" target="$image_target">
-			<img src="${image.data}" alt="${image.alt.data}" />
-		</a>
+		#if($image.videoId.data == "")
+			## Image Gallery
+    		<a href="${image.link.data}" class="${link_class} banner-box-item" target="$image_target">
+    			<img src="${image.data}" alt="${image.alt.data}" />
+    		</a>
+		#else
+			## Youtube movie
+			<div class="banner-box-item movie-box">
+				
+    			<div class="movie-ctn" data-videoId="${image.videoId.data}">
+    			</div>
+			</div>
+			
+		#end
 		
-		#set($is_first_image = false)
+		#set($item_index = $item_index + 1)
 	#end
 </div>
 

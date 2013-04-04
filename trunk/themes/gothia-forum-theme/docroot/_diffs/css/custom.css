@@ -1754,7 +1754,7 @@ ul.gothia-search-results-list li a:hover .result-item-content {
 	width: 100%;
 }
 
-.banner-box a.banner-box-link {
+.banner-box .banner-box-item {
 	display: block;
 	height: 200px;
 	overflow: hidden;
@@ -1767,6 +1767,14 @@ ul.gothia-search-results-list li a:hover .result-item-content {
 	padding: 0;
 	position: absolute;
 	top: 0;
+}
+
+.banner-box-js .aui-carousel-item {
+	display: none;
+}
+
+.banner-box-js .aui-carousel-item-active {
+	display: block;
 }
 
 .banner-box-js .aui-carousel menu {
@@ -1786,6 +1794,19 @@ ul.gothia-search-results-list li a:hover .result-item-content {
 .banner-box-js .aui-carousel-menu-prev,
 .banner-box-js .aui-carousel-menu-next {
 	display: none;
+}
+
+.banner-box .movie-box {
+	background: #000;
+	display: none;
+	margin: 0 auto;
+	text-align: center;
+	height: 200px;
+	width: 659px;
+}
+
+.banner-box-js .movie-box {
+	display: block;
 }
 
 /*------- Coworkers -------*/
