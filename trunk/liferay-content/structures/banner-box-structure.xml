@@ -2,7 +2,7 @@
 	<dynamic-element name='images' type='image_gallery' index-type='' repeatable='true'>
 		<meta-data>
 			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
-			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
 			<entry name="instructions"><![CDATA[V&auml;lj bild i bildgalleriet.]]></entry>
 			<entry name="label"><![CDATA[Bild]]></entry>
 			<entry name="predefinedValue"><![CDATA[]]></entry>

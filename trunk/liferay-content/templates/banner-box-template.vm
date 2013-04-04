@@ -24,8 +24,10 @@
 		#else
 			## Youtube movie
 			<div class="banner-box-item movie-box">
-				
     			<div class="movie-ctn" data-videoId="${image.videoId.data}">
+                    <a href="#">
+						<img src="${image.data}" alt="${image.alt.data}" />
+					</a>
     			</div>
 			</div>
 			

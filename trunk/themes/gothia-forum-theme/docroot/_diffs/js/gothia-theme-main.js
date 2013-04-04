@@ -57,7 +57,75 @@ AUI().add('gothia-theme-main',function(A) {
 					bindUI: function() {
 						var instance = this;
 						
+						instance._bindMovieLinks();
 						instance._bindRegionCalendarLinks();
+					},
+					
+					_bindMovieLinks: function() {
+						var instance = this;
+						
+						var movieLinks = A.all('.movie-ctn a');
+						
+						movieLinks.on('click', function(e) {
+							var instance = this;
+							
+							e.halt();
+							
+							var currentTarget = e.currentTarget;
+							
+							var movieCtn = currentTarget.ancestor('.movie-ctn');
+							
+							if(movieCtn) {
+								var videoId = movieCtn.getAttribute('data-videoId');
+								var nodeId = movieCtn.getAttribute('id');
+								
+								if(nodeId == "") {
+									nodeId = movieCtn.guid();
+								}
+								
+								if(YT != null) {
+									var onStateChange = function(event) {
+										var player = event.target;
+										var playerStatus = event.data;
+										
+										if(playerStatus == 1) {
+											
+											instance.bannerVideoPlaying = true;
+											
+											if(instance.bannerCarousel) {
+												instance.bannerCarousel.pause();
+											}
+										}
+										else {
+											instance.bannerVideoPlaying = false;
+											
+											if(instance.bannerCarousel) {
+												instance.bannerCarousel.play();	
+											}
+										}
+									}
+
+						            var player = new YT.Player(nodeId, {
+										height: '200',
+										width: '356',
+										videoId: videoId,
+										playerVars: {
+											autoplay: 1,
+											modestbranding: 1,
+											wmode: 'opaque'
+										}					              
+						            });
+						            
+						            if(A.one('body').hasClass('ie7')) {
+						            	player.attachEvent('onStateChange', onStateChange);
+						            } else {
+						            	player.addEventListener('onStateChange', onStateChange);
+						            }
+								}
+							}
+							
+							
+						}, instance);
 					},
 					
 					_bindRegionCalendarLinks: function() {
@@ -171,9 +239,11 @@ AUI().add('gothia-theme-main',function(A) {
 							}
 						}, instance);
 						
+						/*
 						var movieWraps = bannerBox.all('.movie-ctn');
 						
 						// Init movie players
+						
 						movieWraps.each(function(item, index, list) {
 							
 							var videoId = item.getAttribute('data-videoId');
@@ -209,7 +279,6 @@ AUI().add('gothia-theme-main',function(A) {
 									}
 								}
 
-								/* */
 					            var player = new YT.Player(nodeId, {
 									height: '200',
 									width: '356',
@@ -236,6 +305,7 @@ AUI().add('gothia-theme-main',function(A) {
 								
 							}
 						});
+						*/
 					},
 					
 					getFoo: function() {
