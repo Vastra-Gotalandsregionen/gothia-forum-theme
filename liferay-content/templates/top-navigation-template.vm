@@ -67,7 +67,7 @@
             	#set($linkLayoutId = $getterUtil.getLong($link.internalLink.data))
             	#set ($linkLayout = $layoutLocalService.getLayout($groupIdLong, $scopeLayout.isPrivateLayout(), $linkLayoutId))
             	#set($linkURL = $urlPrefix + $linkLayout.getFriendlyURL())
-    			#set($linkURL = "#internal")
+    			##set($linkURL = "#internal")
     		#end
     		
     		#set($targetForLink = "")
