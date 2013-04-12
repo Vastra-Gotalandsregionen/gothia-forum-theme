@@ -52,6 +52,7 @@ AUI().add('gothia-theme-main',function(A) {
 						instance._cleanUpBlogsAggregator();
 						instance._cleanUpBlogsPortlet();
 						instance._cleanupSiteBreadcrumbs();
+						instance._fixPushBoxes();
 					},
 	
 					bindUI: function() {
@@ -208,7 +209,19 @@ AUI().add('gothia-theme-main',function(A) {
 								firstBreadcrumbLink.html(firstNavigationLink.html());
 							}
 						}
-					},					
+					},
+					
+					_fixPushBoxes: function() {
+						var instance = this;
+						
+						var articlePushBoxes = A.all('.journal-content-article .simple-push-box');
+
+						articlePushBoxes.each(function(item, index, list) {
+							var portletContainer = item.ancestor('.portlet-borderless-container');
+							portletContainer.addClass('portlet-borderless-container-minimized');
+						});						
+						
+					},
 					
 					_initBannerCarousel: function() {
 						var instance = this;
