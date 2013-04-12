@@ -34,14 +34,3 @@
 		#end
 	</div>
 #end
-
-<script type="text/javascript">
-	AUI().use('aui-base', function(A) {
-		var portletNamespace = '${request.portlet-namespace}';
-		var portletBoundary = A.one('#p_p_id' + portletNamespace);
-
-		var portletContainer = portletBoundary.one('.portlet-borderless-container');
-		
-		portletContainer.addClass('portlet-borderless-container-minimized');
-	});
-</script>
