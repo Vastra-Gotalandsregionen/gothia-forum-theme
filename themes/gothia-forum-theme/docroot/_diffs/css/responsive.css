@@ -1,0 +1,274 @@
+
+/*----------------------------------------------------------------------
+=All devices with width 940px or less and iPad both landscape and portrait
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 960px),
+	screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+	/* ----------------- Base blocks ----------------------- */
+	
+	.header-inner,
+	.content-inner {
+		width: 94%;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+
+	.header-inner {
+		padding-bottom: 0;
+	}
+	
+	.content-inner {
+		margin-top: 0;
+	}
+	
+	.content-inner-top {
+		display: none;
+	}
+
+
+	/* ----------------- Banner / header ----------------------- */
+	
+	#header {
+		background: #0076b5;
+	}
+	
+	#header .logo-wrap {
+		display: none;
+	}
+	
+	#header .responsive-logo-wrap {
+		display: block;
+	}
+	
+	#header .top-bar {
+		padding: 5px 0 5px 0;
+	}
+	
+	#header .top-nav-wrap {
+		/*
+		float: none;
+		max-width: 100%;
+		width: 100%;
+		*/
+	}
+	
+	.top-nav-wrap ul {
+		float: none;
+		text-align: center;
+	}
+
+	.top-nav-wrap ul li {
+		display: inline-block;
+		float: none;
+	}
+	
+	.top-nav-wrap ul li a {
+		color: #fff;
+		display: inline-block;
+		float: none;
+	}
+
+	.top-nav-wrap ul .profile-help {
+		display: none;
+	}
+	
+	/* ----------------- Footer ----------------------- */
+	
+	
+	#footer .aui-column-content {
+		padding: 0 1.4em;
+	}
+	
+	/* -----------------  Layout ----------------------- */
+	
+	/*---- Columns ----*/
+	
+	#content .portlet-column {
+		display: block;
+		width: 100.0%;
+	}
+	
+	.aui-w20.portlet-column-first,
+	.aui-w30.portlet-column-first {
+		display: none;
+	}
+	
+	.portlet-layout .portlet-column-content {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+
+	/* ----------------- Liferay Portlets ----------------------- */
+	
+	/*---- Navigation Portlet ----*/
+	
+	.portlet-column-first .portlet-navigation {
+		display: none;
+	}
+		
+	/* ----------------- Custom Portlets ----------------------- */
+	
+	/*---- Some Portlet ----*/
+	
+	
+	
+	/* ----------------- Navigation ----------------------- */
+	
+	/* -- Main Navigation -- */
+	
+	.nav-wrap {
+		display: none;
+	}
+	
+	/* -- Breadcrumbs -- */
+	
+	.site-breadcrumbs {
+		display: none;
+	}
+
+	/* -- Navigation Menu Button -- */
+	  
+	#navigationButtonMenu {
+		display: block;
+	}
+	
+	#navigationTrigger {
+		display: block;
+		float: left;
+		margin-left: 0;
+		margin-top: 0;
+		position: relative;
+		visibility: hidden;
+	}
+	
+	#navigationTrigger.navigation-trigger-ready {
+		visibility: visible;
+	}
+  
+	#navigationButtonMenu ul {
+	}
+	
+	/* -- Top navigation -- */
+	#header .top-nav-wrap {
+		display: none;
+	}
+
+
+	
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 800px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 800px) {
+	
+	
+	/* -----------------  Layout ----------------------- */
+
+
+	
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 600px or less
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 600px) {
+	
+	
+	/* ----------------- Banner / header ----------------------- */
+	
+	
+	/* -----------------  Layout ----------------------- */
+	
+	
+	/* -----------------  Navigation ----------------------- */
+	
+	
+	/* ----------------- Liferay Portlets ----------------------- */
+	
+	/*---- Some Portlet ----*/
+	
+		
+	/* ----------------- Custom Portlets ----------------------- */
+	
+	/*---- Some Portlet ----*/
+	
+	
+	/* ----------------- Articles ----------------------- */
+	
+	/*---- Some article ----*/
+
+
+
+}
+/*----------------------------------------------------------------------
+=Desktops and laptops
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1320px) {
+}
+
+/*----------------------------------------------------------------------
+=iPads  - portrait and landscape
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {	}
+
+/*----------------------------------------------------------------------
+=Smartphones - landscape 
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 321px) {}
+
+/*----------------------------------------------------------------------
+=Smartphones - portrait 
+----------------------------------------------------------------------*/
+
+@media only screen and (max-width : 320px) {}
+
+
+/*----------------------------------------------------------------------
+=iPads  - portrait and landscape
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
+
+/*----------------------------------------------------------------------
+=iPads  - landscape
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+}
+
+/*----------------------------------------------------------------------
+=iPads  - portrait
+----------------------------------------------------------------------*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+}
+
+/*----------------------------------------------------------------------
+=Desktops and laptops
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1224px) {}
+
+/*----------------------------------------------------------------------
+=Large screens
+----------------------------------------------------------------------*/
+
+@media only screen and (min-width : 1824px) {}
+
+/*----------------------------------------------------------------------
+=iPhone 4
+----------------------------------------------------------------------*/
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}

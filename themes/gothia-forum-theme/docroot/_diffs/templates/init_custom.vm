@@ -137,13 +137,6 @@
 #end
 
 
-## ---------- Google Translate ---------- ##
-
-#set ($google_translate_active = false)
-#if ($propsUtil.get("web.translate.google.translate.active") == "true")
-	#set ($google_translate_active = true)
-#end
-
 ## ---------- Add This Sharing ---------- ##
 
 #set ($add_this_active = false)
@@ -197,4 +190,17 @@
 	#set ( $is_site_english = true )
 #end	
 
+##
+## Theme Javascript
+##
 
+#set($js_full_path = $full_templates_path + "/../js")
+
+## If set to true, theme_js_scripts are loaded inline in page (i.e. directly inside a script tag) which reduces the number of http requests
+#set($theme_js_inline = true)
+
+#set($theme_js_scripts = [
+    "modules/gothia-theme-main.js",
+	"modules/responsive-navigation-button.js",
+	"theme-main.js"
+])
