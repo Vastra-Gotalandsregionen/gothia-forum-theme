@@ -1,3 +1,4 @@
+#*
 <div id="navigation" class="sort-pages modify-pages alt3">
     <ul class="clearfix">
         #set($nav_item_ticker = 0)
@@ -20,3 +21,46 @@
         #end
     </ul>
 </div>
+*#
+
+<nav id="navigation" class="sort-pages modify-pages">
+
+	<ul class="clearfix">
+		#foreach ($nav_item in $nav_items)
+			
+            #if ($nav_item.isSelected())
+                    #set ($nav_item_class = "selected")
+            #else
+                    #set ($nav_item_class = "")
+            #end
+
+            #if($nav_item_ticker == 0)
+                ## Do nothing
+            #else
+                <li class="$nav_item_class">
+                    <a href="$nav_item.getURL()" $nav_item.getTarget()><span>$nav_item.getName()</span></a>
+					
+    				#if ($nav_item.hasChildren())
+    					<ul class="child-menu">
+    						#foreach ($nav_child in $nav_item.getChildren())
+    							#if ($nav_child.isSelected())
+    								<li class="selected">
+    							#else
+    								<li>
+    							#end
+    								<a href="$nav_child.getURL()" $nav_child.getTarget()>$nav_child.getName()</a>
+    							</li>
+    						#end
+    					</ul>
+    				#end
+					
+				</li>
+			#end
+			
+			#set($nav_item_ticker = $nav_item_ticker + 1)
+			
+		#end
+	</ul>
+</nav>
+	
+	

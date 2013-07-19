@@ -47,6 +47,7 @@ AUI().add('gothia-theme-main',function(A) {
 					renderUI: function() {
 						var instance = this;
 						
+						instance._initNavigationButton();
 						instance._initBannerCarousel();
 						instance._initFAQ();
 						instance._cleanUpBlogsAggregator();
@@ -348,6 +349,17 @@ AUI().add('gothia-theme-main',function(A) {
 						entryQuestions.on('click', instance._onFaqQuestionsClick, instance);
 					},
 					
+            		_initNavigationButton: function() {
+            			var instance = this;
+            			
+            			var responsiveNavigationButton = new A.ResponsiveNavigationButton({
+            				bannerNode: '#header',
+            				useMask: true
+            			});
+            			
+            			responsiveNavigationButton.render();
+            		},
+					
 					_onBeforeRegionCalendarDialogRender: function(e, params) {
 						var instance = this;
 						
@@ -431,6 +443,7 @@ AUI().add('gothia-theme-main',function(A) {
 			'aui-carousel',
 			'aui-dialog',
 			'anim-node-plugin',
+			'responsive-navigation-button',
 			'event-mouseenter'
       ]
 	}

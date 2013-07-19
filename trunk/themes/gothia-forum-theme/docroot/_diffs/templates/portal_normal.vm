@@ -7,16 +7,20 @@
 <head>
 	<title>$the_title - $company_name</title>
 	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
 	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" />
 	
 	$theme.include($top_head_include)
-
+	
 	### TODO: move to separate style sheet	
 	<!--[if !IE 7]>
 		<style type="text/css">
 			#wrap {display:table;height:100%}
 		</style>
 	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="$css_folder/responsive.css" />
 </head>
 
 #if($is_site_english)
@@ -41,6 +45,15 @@
 					</div>
 				#end
 			</div>
+
+			<a href="navigationTrigger" id="navigationTrigger"><span>Menu</span></a>
+            <div class="logo-wrap responsive-logo-wrap">
+    			<h1 class="company-title">
+    				<a class="logo" href="/home" title="#language("go-to") $company_name">
+    					<span>$company_name</span>
+    				</a>
+    			</h1>
+			</div>
 			
 			<div class="top-bar clearfix">
 				<div class="logo-wrap">
@@ -62,9 +75,6 @@
 				</div>
 				
 				<div class="top-nav-wrap">
-					#if($google_translate_active)
-						#parse ("$full_templates_path/google_translate.vm")
-					#end
 					#parse ("$full_templates_path/top_navigation.vm")
 				</div>
 			</div>
@@ -79,24 +89,26 @@
 	<div id="content">
 		<div class="content-inner grid-960 clearfix">
 		
-			<div class="aui-column aui-w70">
-				#if($use_site_breadcrumbs)
-					<nav class="site-breadcrumbs" id="breadcrumbs">
-						<h1>
-							<span>#language("breadcrumbs")</span>
-						</h1>
-						#breadcrumbs()
-					</nav>
-				#else
-					&nbsp;
-				#end
-			</div>
-			<div class="aui-column aui-w30">
-				#if($add_this_active)
-					#parse ("$full_templates_path/sharing_add_this.vm")
-				#else
-					&nbsp;
-				#end
+			<div class="content-inner-top">
+    			<div class="aui-column aui-w70">
+    				#if($use_site_breadcrumbs)
+    					<nav class="site-breadcrumbs" id="breadcrumbs">
+    						<h1>
+    							<span>#language("breadcrumbs")</span>
+    						</h1>
+    						#breadcrumbs()
+    					</nav>
+    				#else
+    					&nbsp;
+    				#end
+    			</div>
+    			<div class="aui-column aui-w30">
+    				#if($add_this_active)
+    					#parse ("$full_templates_path/sharing_add_this.vm")
+    				#else
+    					&nbsp;
+    				#end
+    			</div>
 			</div>
 
 			#if ($selectable)
@@ -122,8 +134,7 @@ $theme.include($bottom_include)
 
 <script src="//www.youtube.com/player_api"></script>
 
-#js ("$javascript_folder/gothia-theme-main.js")
-#js ("$javascript_folder/main-instance.js")
+#parse ("$full_templates_path/theme_js_bottom.vm")
 
 #if($google_translate_active)
 	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

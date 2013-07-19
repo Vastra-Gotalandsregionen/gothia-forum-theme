@@ -54,7 +54,8 @@ body {
 .grid-960 {
 	margin-left:auto;
 	margin-right:auto;
-	width:960px;
+	max-width: 960px;
+	width: 100%;
 }
 
 #wrap {
@@ -69,7 +70,7 @@ body {
     padding: 0;
 }
 
-#header .header-inner {
+.header-inner {
 	padding: 10px 0;
 }
 
@@ -86,10 +87,22 @@ body {
 	width: 250px;
 }
 
+#header .responsive-logo-wrap {
+	display: none;
+	float: right;
+	width: 150px;
+}
+
 #header .top-nav-wrap {
 	float: right;
 	margin-top: 0px;
-	width: 700px;
+	max-width: 650px;
+	position: relative;
+	width: 100%;
+}
+
+#header .top-nav-wrap .portlet-boundary {
+	margin: 0;
 }
 
 #header h1.company-title {
@@ -109,8 +122,20 @@ body {
     width: 243px;
 }
 
+#header .responsive-logo-wrap  a.logo {
+    background: url(../images/common/gothia-forum-logo-responsive.png) no-repeat 0 0;
+    display: block;
+    height: 30px;
+    width: 150px;
+	
+}
+
 .english #header a.logo {
 	background-image: url(../images/common/gothia-forum-logo-eng.png);
+}
+
+.english #header .responsive-logo-wrap  a.logo {
+	background-image: url(../images/common/gothia-forum-logo-responsive-eng.png);
 }
 
 #header h2.community-title,
@@ -283,14 +308,19 @@ a:visited {}
 /*------- Main navigation -------*/
 
 #navigation {
-	margin: 10px 0 0 0;
+	border: 2px solid #cc071e;
+	border-width: 2px 0 0 0;
+	border: 0;
+	margin: 0;
 }
 
 #navigation ul {
-	border-bottom: 2px solid #efede3;
-    list-style: none;
-    margin: 0;
-    padding: 0 0 15px 0;
+	background: #efede3;
+	border: 0;
+	list-style: none; 
+    margin: 2px 0;
+    margin: 1px 0;
+    padding: 0;
 }
 
 #navigation ul li {
@@ -303,13 +333,14 @@ a:visited {}
 
 #navigation ul li a {
 	background: #efede3;
+	border-right: 1px solid #fff;
     color: #cc071e;
     display: block;
     float: left;
     font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: normal;
-    padding: 12px 9px;
+    padding: 10px 14px;
     text-decoration: none;
 }
 
@@ -325,97 +356,9 @@ a:visited {}
 	color: #fff;
 }
 
-/*--- Alt 1 ---*/
-
-#navigation.alt1 {
-	margin: 0;
+#navigation ul ul.child-menu {
+	display: none;
 }
-
-#navigation.alt1 ul {
-	background: #efede3;
-	border: none;
-    margin: 0;
-    padding: 6px;
-}
-
-#navigation.alt1 ul li {
-    margin: 0 2px;
-}
-
-#navigation.alt1 ul li a {
-    padding: 6px;
-}
-
-#navigation.alt1 ul li a:hover {
-}
-
-#navigation.alt1 ul li.selected a,
-#navigation.alt1 ul li a:hover {
-}
-
-/*--- Alt 2 ---*/
-
-#navigation.alt2 {
-	border: 2px solid #efede3;
-	border-width: 2px 0;
-	margin: 0;
-}
-
-#navigation.alt2 ul {
-	background: #efede3;
-	border: 0; 
-    margin: 2px 0;
-    padding: 0;
-}
-
-#navigation.alt2 ul li {
-    margin: 0 1px;
-}
-
-#navigation.alt2 ul li a {
-    padding: 6px;
-}
-
-#navigation.alt2 ul li a:hover {
-}
-
-#navigation.alt2 ul li.selected a,
-#navigation.alt2 ul li a:hover {
-}
-
-/*--- Alt 3 ---*/
-
-#navigation.alt3 {
-	border: 2px solid #cc071e;
-	border-width: 2px 0 0 0;
-	border: 0;
-	margin: 0;
-}
-
-#navigation.alt3 ul {
-	background: #efede3;
-	border: 0; 
-    margin: 2px 0;
-    margin: 1px 0;
-    padding: 0;
-}
-
-#navigation.alt3 ul li {
-    margin: 0 1px;
-}
-
-#navigation.alt3 ul li a {
-	border-right: 1px solid #fff;
-    padding: 10px 14px;
-}
-
-#navigation.alt3 ul li a:hover {
-}
-
-#navigation.alt3 ul li.selected a,
-#navigation.alt3 ul li a:hover {
-}
-
 
 /*------- Top navigation -------*/
 
@@ -479,6 +422,123 @@ a:visited {}
 	color: #555;
 	font-size: 1.0em;
 }
+
+/*------- Navigation Menu Button (used with responsive design) -------*/
+
+#navigationTrigger {
+	background: #0076b5;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #0076b5;
+	color: #fff;
+	display: block;
+	float: none;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.3em;
+	font-weight: normal;
+	line-height: 1.0;
+	margin: 10px 15px 0 15px;
+	padding: 10px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#navigationTrigger.menu-active {
+	border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-bottom: none;
+}
+
+#navigationButtonMenu {
+	margin: -3px 0 0 0;
+	overflow: hidden;
+	position: relative;
+	top: -10px;
+	z-index: 5000;
+	width: 100%;
+}
+
+#navigationButtonMenu ul {
+	background: #3b9ecf;
+	border: 1px solid #3a84c1;
+	list-style-type: none;
+	margin: 0 15px;
+	padding: 0;
+}
+
+#navigationButtonMenu ul li {
+	border-bottom: 1px solid #3a84c1;
+	margin: 0;
+	padding: 0;
+}
+
+#navigationButtonMenu ul li.expanded {
+	background: #0090ba;
+}
+
+#navigationButtonMenu ul li a {
+	border-bottom: 1px solid #4da8d6;
+	color: #fff;
+	display: block;
+	font-family:  Arial, Verdana, Helvetica, sans-serif;
+	font-size: 1.2em;
+	font-weight: normal;
+	padding: 10px;
+	text-decoration: none;
+}
+
+#navigationButtonMenu ul li.last,	
+#navigationButtonMenu ul li.last > a {
+	border-bottom: none;
+}
+
+#navigationButtonMenu ul li a:hover {
+	background: #d2dadd;
+	color: #000;
+}
+
+#navigationButtonMenu ul li.selected > a,
+#navigationButtonMenu ul li.selected > a:hover {
+	background: #D2DADD;
+	color: #000;
+	
+}
+
+#navigationButtonMenu ul ul {
+	background: #0090b8;
+	border: 1px solid #0090b8;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+#navigationButtonMenu ul ul li {
+	border-bottom: none;
+}
+
+#navigationButtonMenu ul ul li a {
+	background: #f0f1f5;
+	border-bottom: 1px solid #c4ced5;
+	color: #2f73a9;
+}
+
+#navigationButtonMenu ul ul li a:hover {
+	background: #fff;
+}
+
+#navigationButtonMenu ul ul li.last {
+	border-bottom: none;
+}
+
+/* Hide responsive navigation */
+#navigationTrigger,
+#navigationButtonMenu {
+	display: none;
+}
+
 
 /*----------------------------------------------------------------------
 =Layout
@@ -691,6 +751,15 @@ input.password {
 .portlet-borderless-container-minimized {
 	min-height: 0;
 }
+
+.signed-in.controls-visible .portlet-borderless-container {
+	min-height: 2.5em;
+}
+
+.portlet-borderless-container {
+	min-height: 0;
+}
+
 
 /*------- Navigation Portlet -------*/
 

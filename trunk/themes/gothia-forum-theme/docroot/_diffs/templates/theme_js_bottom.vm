@@ -1,0 +1,11 @@
+#if($theme_js_inline)
+    <script type="text/javascript">
+        #foreach($theme_js_script in $theme_js_scripts)
+        	#include ("$js_full_path/$theme_js_script")
+        #end
+    </script>
+#else
+    #foreach($theme_js_script in $theme_js_scripts)
+		#js ("$javascript_folder/$theme_js_script")
+    #end
+#end
