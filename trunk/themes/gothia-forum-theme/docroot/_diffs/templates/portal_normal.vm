@@ -49,7 +49,7 @@
 			<a href="navigationTrigger" id="navigationTrigger"><span>Menu</span></a>
             <div class="logo-wrap responsive-logo-wrap">
     			<h1 class="company-title">
-    				<a class="logo" href="/home" title="#language("go-to") $company_name">
+    				<a class="logo" href="/hem" title="#language("go-to") $company_name">
     					<span>$company_name</span>
     				</a>
     			</h1>
@@ -59,7 +59,7 @@
 				<div class="logo-wrap">
 					<hgroup id="heading">
 						<h1 class="company-title">
-							<a class="logo" href="/home" title="#language("go-to") $company_name">
+							<a class="logo" href="/hem" title="#language("go-to") $company_name">
 								<span>$company_name</span>
 							</a>
 						</h1>
