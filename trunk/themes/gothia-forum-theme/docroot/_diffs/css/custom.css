@@ -96,7 +96,7 @@ body {
 #header .top-nav-wrap {
 	float: right;
 	margin-top: 0px;
-	max-width: 650px;
+	max-width: 550px;
 	position: relative;
 	width: 100%;
 }
@@ -180,6 +180,7 @@ body {
 
 #footer h2 {
 	border-bottom: 1px solid #dcdad1;
+	border-bottom: none;
 	color: #d50000;
 	font-size: 1.5em;
 	margin: 0.5em 0;
@@ -338,7 +339,7 @@ a:visited {}
     display: block;
     float: left;
     font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 1.4em;
     font-weight: normal;
     padding: 10px 14px;
     text-decoration: none;
@@ -362,15 +363,22 @@ a:visited {}
 
 /*------- Top navigation -------*/
 
+.top-nav-wrap .portlet-journal-content {
+	float: right;
+	position: relative;
+}
+
 .top-nav-wrap ul {
 	float: right;
 	list-style-type: none;
 	margin: 0;
 	padding; 0;
+	width: 100%;
 }
 
 .top-nav-wrap ul li {
 	color: #0077b3;
+	display: block;
 	float: left;
 	margin: 0;
 	padding: 0;
@@ -380,12 +388,13 @@ a:visited {}
 .top-nav-wrap ul li a {
 	display: block;
 	float: left;
-	font-size: 14px;
+	font-size: 1.1em;
 	margin: 0 5px;
 	padding: 0 5px;
 }
 
 .top-nav-wrap ul li.profile-link {
+	min-height: 50px;
 	margin: 0;
 }
 
@@ -1058,7 +1067,7 @@ input.password {
 }
 
 .search-box-bd p {
-	font-size: 16px;
+	font-size: 1.2em;
 }
 
 .search-wrap {
@@ -1651,80 +1660,6 @@ a.rss-link {
 	margin: 0 0 0 80px;
 }
 
-/*------- Search Results List -------*/
-
-/*
-ul.gothia-search-results-list {
-	list-style-type: none;
-	margin: 0 -10px;
-	padding: 0;
-}
-
-ul.gothia-search-results-list li {
-	display: block;
-	float: left;
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	width: 33%;
-}
-
-ul.gothia-search-results-list li a {
-	background: #efede3;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	display: block;
-	margin: 10px;
-	padding: 10px;
-	text-decoration: none;
-}
-
-ul.gothia-search-results-list .result-item-title,
-ul.gothia-search-results-list .result-item-content {
-	height: 120px;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-}	
-
-ul.gothia-search-results-list .result-item-title {
-	color: #cc071e;
-	display: block;
-	font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
-	font-size: 1.3em;
-}
-
-ul.gothia-search-results-list .result-item-content {
-	color: #222;
-	display: none;
-	font-size: 1.0em;
-}
-
-ul.gothia-search-results-list .result-item-content p {
-
-}
-
-ul.gothia-search-results-list li a:hover {
-	cursor: pointer;
-	background: #cc071e;
-	text-decoration: none;
-}
-
-ul.gothia-search-results-list li a:hover .result-item-title,
-ul.gothia-search-results-list li a:hover .result-item-content {
-	color: #fff;
-	cursor: pointer;
-}
-
-ul.gothia-search-results-list li a:hover .result-item-title {
-	display: none;
-}
-
-ul.gothia-search-results-list li a:hover .result-item-content {
-	display: block;
-}
-*/
 
 /*------- Search Results List New -------*/
 
@@ -1768,54 +1703,6 @@ ul.gothia-search-results-list .result-item-content {
 	line-height: 1.1;
 }
 
-
-/*
-ul.gothia-search-results-list .result-item-title,
-ul.gothia-search-results-list .result-item-content {
-	height: 120px;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-}	
-
-ul.gothia-search-results-list .result-item-title {
-	color: #cc071e;
-	display: block;
-	font-family: 'Droid Sans', Arial, Helvetica, sans-serif;
-	font-size: 1.3em;
-}
-
-ul.gothia-search-results-list .result-item-content {
-	color: #222;
-	display: none;
-	font-size: 1.0em;
-}
-
-ul.gothia-search-results-list .result-item-content p {
-
-}
-
-ul.gothia-search-results-list li a:hover {
-	cursor: pointer;
-	background: #cc071e;
-	text-decoration: none;
-}
-
-ul.gothia-search-results-list li a:hover .result-item-title,
-ul.gothia-search-results-list li a:hover .result-item-content {
-	color: #fff;
-	cursor: pointer;
-}
-
-ul.gothia-search-results-list li a:hover .result-item-title {
-	display: none;
-}
-
-ul.gothia-search-results-list li a:hover .result-item-content {
-	display: block;
-}
-*/
-
 /*------- Banner Box Carousel -------*/
 
 .banner-box {
@@ -1825,9 +1712,11 @@ ul.gothia-search-results-list li a:hover .result-item-content {
 
 .banner-box .banner-box-item {
 	display: block;
-	height: 200px;
 	overflow: hidden;
-	width: 659px;
+}
+
+.banner-box .banner-box-item img {
+	width: 100%;
 }
 
 .banner-box-js .aui-carousel {
@@ -1866,12 +1755,9 @@ ul.gothia-search-results-list li a:hover .result-item-content {
 }
 
 .banner-box .movie-box {
-	background: #000;
 	display: none;
 	margin: 0 auto;
 	text-align: center;
-	height: 200px;
-	width: 659px;
 }
 
 .banner-box-js .movie-box {
@@ -2066,6 +1952,13 @@ ul.cal-list li .cal-entry-details {
 	border-width: 0 1px 1px 0;
 	padding: 10px;
 }
+
+/*------- Simple Push Box -------*/
+
+.simple-push-box img {
+	width: 100%;
+}
+
 
 /*----------------------------------------------------------------------
 =Sandbox

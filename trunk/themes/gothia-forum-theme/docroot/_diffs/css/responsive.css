@@ -1,11 +1,119 @@
-
 /*----------------------------------------------------------------------
-=All devices with width 940px or less and iPad both landscape and portrait
+=All devices with width 960px or less
 ----------------------------------------------------------------------*/
 
 @media only
-	screen and (max-width : 960px),
-	screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	screen and (max-width : 960px) {
+
+	/* ----------------- Navigation ----------------------- */
+	
+	#navigation ul li a {
+		font-size: 1.3em;
+	}
+
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 820px or less
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 820px) {
+		
+	/* ----------------- Header ----------------------- */
+	
+	#header .top-nav-wrap {
+		max-width: 450px;
+	}
+
+	/* ----------------- Navigation ----------------------- */
+	
+	#navigation ul li a {
+		font-size: 1.2em;
+	}
+
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 720px or less
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 720px) {
+		
+		
+	/* ----------------- Header ----------------------- */
+
+	#header .logo-wrap {
+		float: none;
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	#header a.logo {
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	#header .top-nav-wrap {
+		float: none;
+		margin-top: 10px;
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	.top-nav-wrap .portlet-journal-content {
+			float: none;
+			margin: 0 auto;
+			text-align: center;
+	}
+	
+	
+	.top-nav-wrap ul {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.top-nav-wrap ul li {
+		display: inline-block;
+		float: none;
+	}
+	
+	.top-nav-wrap ul li a {
+		float: none;
+	}
+	
+
+		
+
+	/* ----------------- Navigation ----------------------- */
+	
+	#navigation ul li a {
+		font-size: 1.1em;
+	}
+	
+	/* ----------------- Footer ----------------------- */
+	
+	#footer h2 {
+		border-bottom: none;
+		font-size: 1.2em;
+	}
+	
+	#footer .aui-column {
+		width: 100%;
+	}
+
+
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 480px or less
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 480px) {
 
 	/* ----------------- Base blocks ----------------------- */
 	
@@ -77,6 +185,10 @@
 	
 	/* ----------------- Footer ----------------------- */
 	
+	#footer .aui-column {
+		display: block;
+		width: 100.0%;
+	}
 	
 	#footer .aui-column-content {
 		padding: 0 1.4em;
@@ -156,6 +268,38 @@
 	#header .top-nav-wrap {
 		display: none;
 	}
+
+
+}
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------
+=Mobiles
+----------------------------------------------------------------------*/
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+
+
+}
+
+
+/*----------------------------------------------------------------------
+=All devices with width 940px or less and iPad both landscape and portrait
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 960px),
+	screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
 
 
 	
