@@ -87,14 +87,12 @@
                     <a href="/c/portal/logout">${linkSignout.data}</a>
     			</li>
 			#end
-			##Temp
-			#set($showProfileLink = true)
-			#if($showProfileLink)
 				#set($profileUrl = "")
     		
-            	#set($profileLayoutId = $getterUtil.getLong($linkProfile.internalLink.data))
-            	#set ($profileLayout = $layoutLocalService.getLayout($groupIdLong, $scopeLayout.isPrivateLayout(), $linkLayoutId))
-            	#set($profileUrl = $urlPrefix + $profileLayout.getFriendlyURL())
+				#set($currentLayoutId = $getterUtil.getLong($linkProfile.internalLink.data))			
+				#set ($currentLayout = $layoutLocalService.getLayout($groupIdLong, $scopeLayout.isPrivateLayout(), $currentLayoutId))
+				
+            	#set($profileUrl = $urlPrefix + $currentLayout.getFriendlyURL())
 				
                 <li class="profile-link">
 					<a href="${profileUrl}"><span>${linkProfile.data}</span></a>
@@ -102,7 +100,6 @@
                     <span class="profile-help">${linkProfile.help.data}</span>
 					#end
     			</li>
-			#end	
 		#else
 			#if($linkSignin.data != "")
                 <li>
