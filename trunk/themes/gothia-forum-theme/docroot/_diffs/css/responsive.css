@@ -198,7 +198,9 @@
 	
 	/*---- Columns ----*/
 	
+	.grid-960 .aui-column,
 	#content .portlet-column {
+		float: none;
 		display: block;
 		width: 100.0%;
 	}
