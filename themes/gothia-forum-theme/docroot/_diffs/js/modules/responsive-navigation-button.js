@@ -130,9 +130,11 @@ AUI().add('responsive-navigation-button',function(A) {
                     		
                     		var listItem = item.ancestor('li');
                     		
+                    		/*
                     		if(index+1 == list.size()) {
                     			cssClass = cssClass + ' last';
                     		}
+                    		*/
                     		
                     		if(listItem.hasClass(CSS_SELECTED)) {
                     			cssClass = cssClass + ' ' + CSS_SELECTED;

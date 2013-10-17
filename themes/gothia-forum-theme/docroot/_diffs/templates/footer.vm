@@ -2,25 +2,31 @@
 	<div class="aui-column aui-w25 aui-column-first">
 		<div class="aui-column-content">
 			$footer-col-1-content
+			&nbsp;
 		</div>
 	</div>
 	<div class="aui-column aui-w25">
 		<div class="aui-column-content">
 			$footer-col-2-content
+			&nbsp;
 		</div>
 	</div>
 	<div class="aui-column aui-w25">
 		<div class="aui-column-content">
 			$footer-col-3-content
+			&nbsp;
 		</div>
 	</div>
 	<div class="aui-column aui-w25 aui-column-last">
 		<div class="aui-column-content">
 			$footer-col-4-content
+			&nbsp;
 		</div>
 	</div>
+</div>
+<div class="aui-layout grid-960 clearfix">
 	<div class="aui-column aui-w100 footer-ft">
-		<h1 class="vgr-logo">
+		<h1 class="vgr-logo clearfix">
 			<a class="logo" href="$vgr_url" title="#language("go-to") $vgr_text">
 				<span>$vgr_text</span>
 			</a>

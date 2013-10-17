@@ -347,7 +347,7 @@ AUI().add('gothia-theme-main',function(A) {
             			
             			var responsiveNavigationButton = new A.ResponsiveNavigationButton({
             				bannerNode: '#header',
-            				useMask: true
+            				useMask: false
             			});
             			
             			responsiveNavigationButton.render();

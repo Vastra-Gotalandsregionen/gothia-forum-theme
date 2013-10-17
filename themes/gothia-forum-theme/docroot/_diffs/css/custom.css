@@ -1542,6 +1542,10 @@ a.rss-link {
 	padding: 0;
 }
 
+.tabbed-rss .aui-tabview-content > h3 {
+	display: none;
+}
+
 .tabbed-rss .aui-tabview-list {
 	background: #cc071e;
 	border: 0;
