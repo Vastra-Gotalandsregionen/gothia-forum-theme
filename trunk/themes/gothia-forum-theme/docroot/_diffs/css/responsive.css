@@ -108,6 +108,7 @@
 
 }
 
+
 /*----------------------------------------------------------------------
 =All devices with width 480px or less
 ----------------------------------------------------------------------*/
@@ -226,8 +227,13 @@
 		
 	/* ----------------- Custom Portlets ----------------------- */
 	
-	/*---- Some Portlet ----*/
+	/*------- Search Portlet -------*/
 	
+	.search-wrap .search-intro,
+	.english .search-wrap .search-intro {
+		background: none;
+		padding-right: 0;
+	}
 	
 	
 	/* ----------------- Navigation ----------------------- */
@@ -270,7 +276,32 @@
 	#header .top-nav-wrap {
 		display: none;
 	}
+	
+	/* ----------------- Articles ----------------------- */
+	
+	/* -- Tabbed RSS -- */
 
+	/* Hide tabs */
+	.tabbed-rss .aui-tabview-list {
+		display: none;
+	}
+	
+	/* Show all tab content */
+	.tabbed-rss .aui-tabview-content.aui-helper-hidden {
+		display: block !important;
+	}
+	
+	/* Show heading (hidden for normal views) */
+	.tabbed-rss .aui-tabview-content > h3 {
+		display: block;
+	}
+	
+	/* Hide rss links */
+	.tabbed-rss ul.feed-list li.rss-item {
+		display: none;
+	}	
+	
+	
 
 }
 

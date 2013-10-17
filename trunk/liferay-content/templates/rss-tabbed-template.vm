@@ -42,46 +42,49 @@
 			## Iterate feed content
 			
 			#foreach($feed in $rssFeedURL.siblings)
-				<ul class="feed-list aui-tabview-content-item__">
-				
-					#set ($maxFeedEntriesCount = $mathTool.toInteger($feed.maxCount.data) )
+				<div class="aui-tabview-content">
+					<h3>${feed.rssFeedLabel.data}</h3>
+					<ul class="feed-list">
 					
-					#if($maxFeedEntriesCount == $NULL)
-						#set ($maxFeedEntriesCount = 10)
-					#end
-					
-					#if($stringUtil.startsWith($feed.data, "http://"))
-				
-						#set($feedEntries = $rssTool.readFeed($feed.data, $maxFeedEntriesCount))
-	
-						#foreach($feedEntry in $feedEntries)
-							<li class="clearfix">
-							
-								#set($entryTitle = $feedEntry.title)
-								#set($entryLink = $feedEntry.link)
-								
-								#set($entryPublishedDate = "&nbsp;")
-								#if($feedEntry.publishedDate != $NULL)
-									#set($entryPublishedDate = $dateUtil.getDate($feedEntry.publishedDate, "yyyy-MM-dd", $locale))
-								#end
-								
-								#set($entrySourceTitle = "")
-								
-								<a href="${entryLink}" target="_BLANK">
-									<span class="feed-date">
-										${entryPublishedDate}
-									</span>
-									<span class="feed-title">${entryTitle} ${entrySourceTitle}</span>
-								</a>
-							</li>						
+						#set ($maxFeedEntriesCount = $mathTool.toInteger($feed.maxCount.data) )
+						
+						#if($maxFeedEntriesCount == $NULL)
+							#set ($maxFeedEntriesCount = 10)
 						#end
-						<li class="clearfix rss-item">
-							<a class="rss-link" href="${feed.data}" target="_BLANK">$languageUtil.get($locale, "rss-subscription")</a>
-						</li>
-					#else
-						<li class="aui-helper-hidden">Inget giltigt feed.</li>						
-					#end
-				</ul>
+						
+						#if($stringUtil.startsWith($feed.data, "http://"))
+					
+							#set($feedEntries = $rssTool.readFeed($feed.data, $maxFeedEntriesCount))
+		
+							#foreach($feedEntry in $feedEntries)
+								<li class="clearfix">
+								
+									#set($entryTitle = $feedEntry.title)
+									#set($entryLink = $feedEntry.link)
+									
+									#set($entryPublishedDate = "&nbsp;")
+									#if($feedEntry.publishedDate != $NULL)
+										#set($entryPublishedDate = $dateUtil.getDate($feedEntry.publishedDate, "yyyy-MM-dd", $locale))
+									#end
+									
+									#set($entrySourceTitle = "")
+									
+									<a href="${entryLink}" target="_BLANK">
+										<span class="feed-date">
+											${entryPublishedDate}
+										</span>
+										<span class="feed-title">${entryTitle} ${entrySourceTitle}</span>
+									</a>
+								</li>						
+							#end
+							<li class="clearfix rss-item">
+								<a class="rss-link" href="${feed.data}" target="_BLANK">$languageUtil.get($locale, "rss-subscription")</a>
+							</li>
+						#else
+							<li class="aui-helper-hidden">Inget giltigt feed.</li>						
+						#end
+					</ul>
+				</div>
 			#end
 		</div>
 	</div>
@@ -90,7 +93,47 @@
 	
 		AUI().ready('aui-base', 'aui-tabs', function(A) {
 		
-			var tabs1 = new A.TabView({
+			var TabViewCustom = A.Base.create('tab-view-custom', A.TabView, [], {
+			
+				_renderTabs: function() {
+					var instance = this;
+				
+					var contentNode = instance.get('contentNode');
+					var listNode = instance.get('listNode');
+					
+					var tabs = listNode.get('children');
+					var tabContent = contentNode.all('.aui-tabview-content');
+	
+					var items = instance.get('items');
+	
+					var tabContentBoxClass = '.' + 'aui-tab-content';
+					
+					tabs.each(
+						function(node, i, nodeList) {
+							var config = {
+								boundingBox: node,
+								contentBox: node.one(tabContentBoxClass),
+								contentNode: tabContent.item(i)
+							};
+	
+							items.splice(i, 0, config);
+						}
+					);
+	
+					var length = items.length;
+	
+					for (var i = 0; i < items.length; i++) {
+						instance.addTab(items[i]);
+					}
+	
+					if (!instance.get('activeTab')) {
+						instance.selectTab(0);
+					}
+				}
+			
+			});
+			
+			var tabs1 = new TabViewCustom({
 				boundingBox: '#${tabsWrapID}',
 				listNode: '#${tabsListID}',
 				contentNode: '#${tabsContentID}'

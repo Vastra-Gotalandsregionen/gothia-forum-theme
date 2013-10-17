@@ -1,4 +1,7 @@
-<h2>${heading.data}</h2>
+#if (${heading.data} != "")
+	<h2>${heading.data}</h2>
+#end
+
 #if (${content.type} == "text_area")
 	## Already inside <p>
 	${content.data}
