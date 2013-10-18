@@ -1087,6 +1087,13 @@ input.password {
 	color: #fff;
 }
 
+/* Clearfix style clearing */
+.search-wrap form:after{clear:both;content:'.';display:block;visibility:hidden;height:0}
+.search-wrap form{display:inline-block}
+* html .search-wrap form{height:1%}
+.search-wrap form{display:block}
+
+
 .search-wrap input[type="text"] {
 	border: 2px solid #fff;
 	width: 300px;
