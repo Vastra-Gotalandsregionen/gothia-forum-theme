@@ -115,8 +115,8 @@
 
 @media only
 	screen and (max-width : 480px),
-	screen and (min-width : 321px) and (max-width : 768px) and (orientation : landscape) {
-
+	screen and (min-device-width : 321px) and (max-device-width : 768px) and (orientation : landscape) {
+		
 	/* ----------------- Base blocks ----------------------- */
 	
 	.header-inner,
@@ -236,6 +236,14 @@
 		padding-right: 0;
 	}
 	
+	.search-wrap .gothia-search-input {
+		margin-bottom: 5px;
+	}
+	
+	.search-wrap input[type="text"] {
+		width: 260px;
+	}
+	
 	
 	/* ----------------- Navigation ----------------------- */
 	
@@ -301,8 +309,6 @@
 	.tabbed-rss ul.feed-list li.rss-item {
 		display: none;
 	}	
-	
-	
 
 }
 
