@@ -36,6 +36,8 @@
 #set($profile_help_text = "H&auml;r kan du &auml;ndra er profil.")
 #set($profile_url = "/var-sida")
 
+#set($nav_trigger_text = "Meny")
+
 
 #if ($theme-setting-language == "english")
     #set($page_contact_text = "Contact")
@@ -50,6 +52,8 @@
     #set($profile_text = "")
     #set($profile_help_text = "")
     #set($profile_url = "")
+    
+    #set($nav_trigger_text = "Menu")
 #end
 
 

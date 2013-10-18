@@ -46,14 +46,16 @@
 	/* ----------------- Header ----------------------- */
 
 	#header .logo-wrap {
-		float: none;
+		float: left;
+		/*
 		width: 100%;
 		max-width: 100%;
+		*/
 	}
 	
 	#header a.logo {
-		margin: 0 auto;
-		text-align: center;
+		margin: 0;
+		text-align: left;
 	}
 	
 	#header .top-nav-wrap {
@@ -85,7 +87,24 @@
 		float: none;
 	}
 	
-
+	/*------- Common elements -------*/
+	
+	h1 {
+		font-size: 1.8em;
+		margin: 0.4em 0 0.4em 0;
+	}
+	
+	h2 {
+		font-size: 1.4em;
+	}
+	
+	h3 {
+		font-size: 1.2em;
+	}
+	
+	h4 {
+		font-size: 1.1em;
+	}
 		
 
 	/* ----------------- Navigation ----------------------- */
@@ -196,6 +215,11 @@
 		padding: 0 1.4em;
 	}
 	
+	#footer a.logo {
+		float: none;
+		margin: 0 auto;
+	}
+	
 	/* -----------------  Layout ----------------------- */
 	
 	/*---- Columns ----*/
@@ -219,6 +243,11 @@
 
 
 	/* ----------------- Liferay Portlets ----------------------- */
+	
+	.portlet-boundary_103_ {
+		margin: 0;
+	}
+	
 	
 	/*---- Navigation Portlet ----*/
 	
@@ -267,7 +296,7 @@
 	
 	#navigationTrigger {
 		display: block;
-		float: left;
+		float: right;
 		margin-left: 0;
 		margin-top: 0;
 		position: relative;
@@ -312,147 +341,55 @@
 
 }
 
-
-
-
-
-
-
-
-
 /*----------------------------------------------------------------------
-=Mobiles
-----------------------------------------------------------------------*/
-
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
-
-
-}
-
-
-/*----------------------------------------------------------------------
-=All devices with width 940px or less and iPad both landscape and portrait
+=All devices with width 400px or less and smartphones in landscape mode
 ----------------------------------------------------------------------*/
 
 @media only
-	screen and (max-width : 960px),
-	screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	screen and (max-width : 400px) {
 
-
-
-	
-}
-
-
-/*----------------------------------------------------------------------
-=All devices with width 800px or less
-----------------------------------------------------------------------*/
-
-@media only screen and (max-width : 800px) {
-	
-	
-	/* -----------------  Layout ----------------------- */
-
-
-	
-}
-
-
-/*----------------------------------------------------------------------
-=All devices with width 600px or less
-----------------------------------------------------------------------*/
-
-@media only screen and (max-width : 600px) {
-	
-	
-	/* ----------------- Banner / header ----------------------- */
-	
-	
-	/* -----------------  Layout ----------------------- */
-	
-	
-	/* -----------------  Navigation ----------------------- */
-	
-	
-	/* ----------------- Liferay Portlets ----------------------- */
-	
-	/*---- Some Portlet ----*/
-	
-		
 	/* ----------------- Custom Portlets ----------------------- */
 	
-	/*---- Some Portlet ----*/
+	/*------- Search Portlet -------*/
 	
+	.search-wrap input[type="text"] {
+		width: 240px;
+	}
+}
+
+/*----------------------------------------------------------------------
+=All devices with width 350px or less and smartphones in landscape mode
+----------------------------------------------------------------------*/
+
+@media only
+	screen and (max-width : 350px) {
+
+	/* ----------------- Custom Portlets ----------------------- */
 	
-	/* ----------------- Articles ----------------------- */
+	/*------- Search Portlet -------*/
 	
-	/*---- Some article ----*/
+	.search-wrap input[type="text"] {
+		width: 220px;
+	}
 
-
-
-}
-/*----------------------------------------------------------------------
-=Desktops and laptops
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1320px) {
+		
 }
 
-/*----------------------------------------------------------------------
-=iPads  - portrait and landscape
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {	}
 
 /*----------------------------------------------------------------------
-=Smartphones - landscape 
+=All devices with width 300px or less and smartphones in landscape mode
 ----------------------------------------------------------------------*/
 
-@media only screen and (min-width : 321px) {}
+@media only
+	screen and (max-width : 300px) {
 
-/*----------------------------------------------------------------------
-=Smartphones - portrait 
-----------------------------------------------------------------------*/
+	/* ----------------- Custom Portlets ----------------------- */
+	
+	/*------- Search Portlet -------*/
+	
+	.search-wrap input[type="text"] {
+		width: 200px;
+	}
 
-@media only screen and (max-width : 320px) {}
-
-
-/*----------------------------------------------------------------------
-=iPads  - portrait and landscape
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {}
-
-/*----------------------------------------------------------------------
-=iPads  - landscape
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+		
 }
-
-/*----------------------------------------------------------------------
-=iPads  - portrait
-----------------------------------------------------------------------*/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-}
-
-/*----------------------------------------------------------------------
-=Desktops and laptops
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1224px) {}
-
-/*----------------------------------------------------------------------
-=Large screens
-----------------------------------------------------------------------*/
-
-@media only screen and (min-width : 1824px) {}
-
-/*----------------------------------------------------------------------
-=iPhone 4
-----------------------------------------------------------------------*/
-
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}

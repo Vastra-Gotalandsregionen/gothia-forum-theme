@@ -89,7 +89,7 @@ body {
 
 #header .responsive-logo-wrap {
 	display: none;
-	float: right;
+	float: left;
 	width: 150px;
 }
 
@@ -302,6 +302,18 @@ a:visited {}
 	display: none;
 }
 
+/* Screen readers only */
+.sr-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	height: 1px;
+	width: 1px;
+}
+
 /*----------------------------------------------------------------------
 =Navigation
 ----------------------------------------------------------------------*/
@@ -444,14 +456,26 @@ a:visited {}
 	display: block;
 	float: none;
 	font-family: Arial, Verdana, Helvetica, sans-serif;
-	font-size: 1.3em;
+	font-size: 1.0em;
 	font-weight: normal;
 	line-height: 1.0;
-	margin: 10px 15px 0 15px;
+	margin: 10px 0 0 15px;
 	padding: 10px;
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+#navigationTrigger .icon-bar {
+	background-color: #fff;
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;	
+}
+
+#navigationTrigger .icon-bar + .icon-bar {
+	margin-top: 4px;
 }
 
 #navigationTrigger.menu-active {
@@ -474,7 +498,7 @@ a:visited {}
 	background: #3b9ecf;
 	border: 1px solid #3a84c1;
 	list-style-type: none;
-	margin: 0 15px;
+	margin: 5px 15px 0 15px;
 	padding: 0;
 }
 

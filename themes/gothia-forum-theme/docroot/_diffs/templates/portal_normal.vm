@@ -46,7 +46,12 @@
 				#end
 			</div>
 
-			<a href="navigationTrigger" id="navigationTrigger"><span>Menu</span></a>
+			<a href="navigationTrigger" id="navigationTrigger">
+		        <span class="sr-only">$nav_trigger_text</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+			</a>
             <div class="logo-wrap responsive-logo-wrap">
     			<h1 class="company-title">
     				<a class="logo" href="/hem" title="#language("go-to") $company_name">
