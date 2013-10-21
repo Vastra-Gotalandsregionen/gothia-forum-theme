@@ -28,5 +28,11 @@
 			<wap-template-path>/gothia_layout_70-30.wap.tpl</wap-template-path>
 			<thumbnail-path>/gothia_layout_70-30.png</thumbnail-path>
 		</layout-template>
+		<layout-template id="gothia_layout_startpage" name="Gothia Startpage">
+			<template-path>/gothia_layout_startpage.tpl</template-path>
+			<wap-template-path>/gothia_layout_startpage.wap.tpl</wap-template-path>
+			<thumbnail-path>/gothia_layout_startpage.png</thumbnail-path>
+		</layout-template>
+				
 	</custom>
 </layout-templates>

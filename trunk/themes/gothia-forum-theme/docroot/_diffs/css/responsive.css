@@ -337,7 +337,13 @@
 	/* Hide rss links */
 	.tabbed-rss ul.feed-list li.rss-item {
 		display: none;
-	}	
+	}
+	
+	/* Hide on startpage */
+	
+	.gothia-startpage .tabbed-rss {
+		display: none;
+	}
 
 }
 
