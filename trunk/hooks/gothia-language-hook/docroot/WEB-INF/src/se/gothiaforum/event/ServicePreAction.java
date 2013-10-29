@@ -26,17 +26,15 @@ public class ServicePreAction extends Action {
 
 		try {
 			HttpSession session = request.getSession();
-			long groupIdFromSession = 0;
 			
 			long companyId = PortalUtil.getCompanyId(request);
 			
-			try {
-				groupIdFromSession = (Long)session.getAttribute("LIFERAY_SHARED_VISITED_GROUP_ID_RECENT");	
-			} catch(ClassCastException cce) {
-				
-			}
+			Object groupFromSessionObj = session.getAttribute("LIFERAY_SHARED_VISITED_GROUP_ID_RECENT");
 			
-			if(groupIdFromSession != 0) {
+			if(groupFromSessionObj != null) {
+				
+				long groupIdFromSession = (Long)groupFromSessionObj;	
+				
 				String siteLanguageId = ExpandoValueLocalServiceUtil.getData(companyId, "com.liferay.portal.model.Group", "CUSTOM_FIELDS", "gothiaSiteLanguage", groupIdFromSession, "");
 				Locale siteLocale = LocaleUtil.fromLanguageId(siteLanguageId);
 				
@@ -64,7 +62,7 @@ public class ServicePreAction extends Action {
 			}
 
 		} catch (Exception e) {
-			System.out.println(e);
+			e.printStackTrace();
 		}
 
 	}
