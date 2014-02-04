@@ -1764,6 +1764,7 @@ ul.gothia-search-results-list .result-item-content {
 
 .banner-box-js .aui-carousel-item {
 	display: none;
+	width: 100%;
 }
 
 .banner-box-js .aui-carousel-item-active {
